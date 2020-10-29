@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import Navbar from "./components/Navbar/Navbar"
 import './App.css';
 import allBeers from './components/ApiFetch/ApiFetch';
 
@@ -7,6 +8,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Navbar />
         <h1>JOOOOO</h1>
         {console.log(allBeers)}
       </div>
