@@ -1,24 +1,5 @@
 {  
     "parser": "babel-eslint",
-<<<<<<< HEAD
-       "env": {
-           "browser": true,
-           "node": true
-       },
-       "extends": "airbnb",
-       "rules": {
-           "react/jsx-filename-extension": [0],
-           "no-tabs": [0],
-           "no-mixed-spaces-and-tabs": [0]
-        },
-        
-        "plugins": [
-            "only-warn"
-        ]
-    }
-    
-    
-=======
         "env": {
             "browser": true,
             "node": true
@@ -34,5 +15,4 @@
             "only-warn"
     ]
 }
->>>>>>> 05f3624cc5386f672090f9895b24457cc93fa4c9
     
