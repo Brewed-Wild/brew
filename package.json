@@ -23,7 +23,7 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest",
+      "react-app/jest"
     ]
   },
   "browserslist": {
@@ -39,7 +39,7 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^18.2.0"
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-only-warn": "^1.0.2"
   }
-  
 }
