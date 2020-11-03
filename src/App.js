@@ -1,18 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar"
+import Home from "./components/HomePage/HomePage"
+import BeerList from "./components/RecipesPage/BeerList"
+import About from "./components/AboutPage/AboutPage"
+import Footer from "./components/Footer/Footer"
 import './App.css';
-import allBeers from './components/ApiFetch/ApiFetch';
+// import allBeers from './components/ApiFetch/ApiFetch';
 
 function App() {
   return (
-    <Router>
       <div className="App">
         <Navbar />
-        <h1>JOOOOO</h1>
-        {console.log(allBeers)}
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/beerList" component={BeerList} />
+          <Route path="/about" component={About} />
+        </Switch>
+        <Footer />
       </div>
-    </Router>
+    
 
   );
 }
