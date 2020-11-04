@@ -5,7 +5,6 @@ import HomePage from './components/HomePage/HomePage';
 import BeerList from './components/RecipesPage/BeerList';
 import About from './components/AboutPage/AboutPage';
 import Footer from './components/Footer/Footer';
-import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 function App() {
