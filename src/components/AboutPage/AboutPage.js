@@ -1,14 +1,13 @@
-// import React from 'react';
-// import './AboutPage.css';
-// import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
+/* eslint-disable react/prefer-stateless-function */
+import React from 'react';
+import './AboutPage.css';
 
-// class About extends React.Component {
+class About extends React.Component {
+  render() {
+    return (
+      <h1>About</h1>
+    );
+  }
+}
 
-//     render () {
-//         return (
-//             <h1>About</h1>
-//         )
-//     }
-// }
-
-// export default About;
+export default About;

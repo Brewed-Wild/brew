@@ -1,39 +1,40 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/state-in-constructor */
+import React from 'react';
+import axios from 'axios';
+import BeerCard from './BeerCard';
 
-import React from "react";
-import axios from "axios";
-import BeerCard from "./BeerCard";
+import './beerList.css';
 
-import "./beerList.css"
-
-class BeerList extends React.Component{
+class BeerList extends React.Component {
     state = {
-        beers: []
+      beers: [],
     }
 
     componentDidMount() {
-        this.getBeers()
-        
+      this.getBeers();
     }
+
     getBeers = () => {
-        axios.get("https://api.punkapi.com/v2/beers/")
-            .then(response => this.setState({ beers : response.data }))
+      axios.get('https://api.punkapi.com/v2/beers/')
+        .then((response) => this.setState({ beers: response.data }));
     }
 
     render() {
-    return (
+      return (
         <div>
-            {/* <button onClick={this.getBeers}>Click To Retreive</button> */}
-            {this.state.beers.map(beer => (
-                <div className="Card">
-                <BeerCard {...beer} key={beer.id}/>
-                </div>                      
-            ))}
-            
-            
+          {/* <button onClick={this.getBeers}>Click To Retreive</button> */}
+          {this.state.beers.map((beer) => (
+            <div className="Card">
+              <BeerCard {...beer} key={beer.id} />
+            </div>
+          ))}
+
         </div>
-        
-    )
-}
+
+      );
+    }
 }
 
 export default BeerList;

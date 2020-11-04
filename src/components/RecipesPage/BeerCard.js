@@ -1,12 +1,14 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+import React from 'react';
 
-function BeerCard (props){
-    return (
-        <div>
-            <h1>{props.name}</h1>
-            <img src = {props.image_url}/>
-        </div>
-    )
+function BeerCard(props) {
+  const { name, imageUrl } = props;
+  return (
+    <div>
+      <h1>{name}</h1>
+      <img src={imageUrl} alt="" />
+    </div>
+  );
 }
 
 export default BeerCard;

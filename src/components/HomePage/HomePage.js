@@ -1,14 +1,13 @@
-// import React from 'react';
-// import './HomePage.css';
-// import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
+/* eslint-disable react/prefer-stateless-function */
+import React from 'react';
+import './HomePage.css';
 
-// class Home extends React.Component {
+class HomePage extends React.Component {
+  render() {
+    return (
+      <h1>Home</h1>
+    );
+  }
+}
 
-//     render () {
-//         return (
-//             <h1>Home</h1>
-//         )
-//     }
-// }
-
-// export default Home;
+export default HomePage;
