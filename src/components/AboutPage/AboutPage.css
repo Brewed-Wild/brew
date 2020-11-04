@@ -1,0 +1,63 @@
+body {
+    background-image: url("/Users/leandrobaseggio/WCS/brew/src/Assets/3459069-01.svg");
+    font-family: 'Cabin', sans-serif;
+}
+
+
+h2 {
+    font-family: 'Rubik', sans-serif;
+    margin: 7em;
+
+}
+
+h5 {
+    font-family: 'Kanit', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.ourStoryContainer {
+    width: 60em;
+    background-color: #e4fde125;
+    border-radius: 1em;
+    box-shadow: 1px 1px 11px 1px #bbb;
+    line-height: 2em;
+    padding: 2em;
+}
+
+
+.ourApproachContainer {
+    width: 60em;
+    background-color: #8ACBB825;
+    border-radius: 1em;
+    box-shadow: 1px 1px 11px 1px #bbb;
+    line-height: 2em;
+    padding: 2em;
+    margin-left: 5em;
+    margin-top: 7em;
+    ;
+}
+
+.endResultContainer {
+    width: 60em;
+    background-color: #64838125;
+    border-radius: 1em;
+    box-shadow: 1px 1px 11px 1px #bbb;
+    line-height: 2em;
+    padding: 2em;
+    margin-left: 10em;
+    margin-top: 7em;
+
+}
+
+img.img-fluid {
+    box-shadow: 1px 1px 11px 1px #666;
+}
+
+.button.btn-lg.btn-info.my-5 {
+    margin-left: 222px;
+}
