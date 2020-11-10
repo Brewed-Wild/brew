@@ -6,7 +6,7 @@ function BeerCard(props) {
   return (
     <div>
       <h1>{name}</h1>
-      <img src={imageUrl} alt="" />
+      <img className="imgBeer" src={imageUrl} alt="" />
     </div>
   );
 }
