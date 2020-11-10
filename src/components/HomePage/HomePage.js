@@ -5,7 +5,10 @@ import './HomePage.css';
 class HomePage extends React.Component {
   render() {
     return (
-      <h1>Home</h1>
+      <div className="home bg-dark">
+
+        <h1>Home</h1>
+      </div>
     );
   }
 }
