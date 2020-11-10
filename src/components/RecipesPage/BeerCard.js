@@ -2,11 +2,11 @@
 import React from 'react';
 
 function BeerCard(props) {
-  const { name, imageUrl } = props;
+  const { name, image_url } = props;
   return (
     <div>
       <h1>{name}</h1>
-      <img src={imageUrl} alt="" />
+      <img src={image_url} alt="" />
     </div>
   );
 }

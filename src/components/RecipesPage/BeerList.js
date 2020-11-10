@@ -3,6 +3,7 @@
 /* eslint-disable react/state-in-constructor */
 import React from 'react';
 import axios from 'axios';
+import Searchbar from '../Searchbar';
 import BeerCard from './BeerCard';
 
 import './beerList.css';
@@ -21,18 +22,24 @@ class BeerList extends React.Component {
         .then((response) => this.setState({ beers: response.data }));
     }
 
+    searchBeers= (event) => {
+      const searchValue = event.target.value;
+      console.log(searchValue);
+      axios.get(`https://api.punkapi.com/v2/beers?beer_name=${searchValue}`)
+        .then((response) => this.setState({ beers: response.data }));
+    };
+
     render() {
       return (
         <div>
           {/* <button onClick={this.getBeers}>Click To Retreive</button> */}
+          <Searchbar searchBeers={this.searchBeers} />
           {this.state.beers.map((beer) => (
             <div className="Card">
               <BeerCard {...beer} key={beer.id} />
             </div>
           ))}
-
         </div>
-
       );
     }
 }

@@ -7,19 +7,29 @@ import About from './components/AboutPage/AboutPage';
 import Footer from './components/Footer/Footer';
 import './App.css';
 
-function App() {
-  return (
+class App extends React.Component {
+  state = {
+
+  }
+
+  SetSearch = (event) => {event.target.value;}
+
+
+  render () {
+    return (
     <div className="App">
-      <Navbar />
+      <Navbar searchBeersApp={this.SetSearch}/>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/beerlist" component={BeerList} />
+        <Route path="/beerlist" component={BeerList} searchBeers={this.SetSearch} />
         <Route path="/about" component={About} />
       </Switch>
       <Footer />
     </div>
 
   );
+  }
+  
 }
 
 export default App;

@@ -1,0 +1,10 @@
+#backgr{
+  background-image: url("../../Assets/FAVICON/beersbackground.jpg");
+  background-position: center;
+  height: 500vh;
+}
+
+#searchfield{
+  height: 30px;
+
+}

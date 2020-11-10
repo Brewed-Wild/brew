@@ -5,7 +5,9 @@ import './HomePage.css';
 class HomePage extends React.Component {
   render() {
     return (
-      <h1>Home</h1>
+      <div id="backgr" classNmae="h-100 w-100">
+        <h2>Home</h2>
+      </div>
     );
   }
 }
