@@ -1,7 +1,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import './HomePage.css';
-import glasses from "../../Assets/glasses.png";
+import glasses3 from "../../Assets/glasses3.png";
 import glasses1 from "../../Assets/glasses1.png";
 
 class HomePage extends React.Component {
@@ -17,7 +17,7 @@ class HomePage extends React.Component {
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src={glasses} alt="First slide" />
+              <img class="d-block w-100" src={glasses3} alt="First slide" />
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/beer-tap-panoramic-david-lee-thompson.jpg" alt="Second slide" />
@@ -40,17 +40,17 @@ class HomePage extends React.Component {
           <div className="card1">
             <p className="cardTitle">Workshop</p>
             <img className="img1" src="https://images.unsplash.com/photo-1436076863939-06870fe779c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" />
-            <p>Join Brewers Heaven Workshop on 07/12/2020 and learn all you need to know to produce your own incredible beer! <br></br>If your are interested just send us an email to reserve your place</p>
+            <p className="cardText">Join Brewers Heaven Workshop on 07/12/2020 and learn all you need to know to produce your own incredible beer! <br></br>If your are interested just send us an email to reserve your place</p>
           </div>
           <div className="card2">
             <p className="cardTitle">Beer of the Week</p>
             <img className="img2" src="https://images.unsplash.com/photo-1507310951869-fe0941df4dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" />
-            <p>This week the most voted beer by our clients was PUNK beer! If you didnt try yet, dont waste more time.</p>
+            <p className="cardText">This week the most voted beer by our clients was PUNK beer! If you didnt try yet, dont waste more time.</p>
           </div>
           <div className="card3">
             <p className="cardTitle">Receipe of the Week</p>
             <img className="img3" src="https://images.unsplash.com/photo-1571947221289-ed32f8faad61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" />
-            <p>Receipe of the Week</p>
+            <p className="cardText">This week we invite you to try this Malt recipe, very simple but very tastfull in the end! What are you wainting to start?</p>
           </div>
         </div>
       </div>
