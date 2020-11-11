@@ -6,10 +6,12 @@ import BeerList from "./components/RecipesPage/BeerList";
 import About from "./components/AboutPage/AboutPage";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
+import FontExample from "./components/RecipesPage/FontExample";
 
 function App() {
   return (
     <div className="App">
+      <FontExample />
       <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage} />

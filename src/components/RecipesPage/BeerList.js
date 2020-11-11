@@ -44,6 +44,7 @@ class BeerList extends React.Component {
   render() {
     return (
       <section>
+        {/* <SliderFilter /> */}
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
