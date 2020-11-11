@@ -55,6 +55,7 @@ button{
   display: flex;
   justify-content: center;
   position: relative;
+  margin-top: 4%;
   
 }
 
@@ -73,8 +74,18 @@ button{
   width: 350px;
   height: 400px;
   background-color: rgba(240, 240, 240, 0.911);
+  display: inline;
   
 }
+.card1:hover{
+background-color: rgb(211, 211, 193);
+}
+.card2:hover{
+  background-color: rgb(177, 177, 142);
+  }
+  .card3:hover{
+    background-color: rgb(177, 177, 142);
+    }
 .cardTitle{
   font-size: 120%;
   font-weight: bold;
@@ -84,4 +95,12 @@ p{
   margin-bottom: auto;
   
 }
- 
+
+body {
+  background-image: url("../../Assets/3459069-01.svg");
+
+}
+.carousel-item{
+  height: 400px;
+}
+
