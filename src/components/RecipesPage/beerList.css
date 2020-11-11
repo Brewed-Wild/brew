@@ -1,21 +1,6 @@
-.Card{
-
-display: flex;
-display: inline-block;
-justify-content: center;
-text-align: center;
-width: 20%;
-
-}
-
-img{
-    height: 60px;
-}
-
-h1{
-    font-size: 15px;
-}
-
-link{
-    margin-right: 10px;
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  grid-gap: 30px;
+  margin: 1rem;
 }

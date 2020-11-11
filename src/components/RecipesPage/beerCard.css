@@ -1,0 +1,101 @@
+.cardContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  height: 360px;
+  width: 500px;
+  margin: 50px auto;
+  border-radius: 7px 7px 7px 7px;
+  background: rgb(226, 226, 226);
+  background: linear-gradient(
+    0deg,
+    rgba(226, 226, 226, 0.8015406846332283) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 420px;
+  width: 207px;
+}
+
+.product-img img {
+  border-radius: 7px 0 0 7px;
+}
+
+.product-info {
+  float: left;
+  height: 360px;
+  width: 347px;
+  border-radius: 1rem;
+  background-color: #fafafa;
+}
+
+.product-text {
+  height: 300px;
+  width: 327px;
+}
+
+.product-text h1 {
+  margin: 0 0 0 38px;
+  padding-top: 2rem;
+  font-size: 30px;
+  color: #474747;
+}
+
+.product-text h1,
+.product-price-btn p {
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.product-text h2 {
+  margin: 1rem 0 1rem 1rem;
+  color: #a2a2a2;
+  letter-spacing: 0.2em;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  /* text-transform: uppercase; */
+}
+
+.product-text p {
+  height: 200px;
+  margin: 0 0 0 0;
+  padding: 0.8rem 1.5rem;
+  color: #8d8d8d;
+  line-height: 1.7em;
+  overflow: hidden;
+  font-family: "Cabin", sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
+  text-align: justify;
+}
+
+.product-price-btn {
+  height: 103px;
+  width: 327px;
+  margin-top: 17px;
+  position: relative;
+}
+
+.product-price-btn p {
+  display: inline-block;
+  position: absolute;
+  top: -13px;
+  height: 50px;
+  font-family: "Trocchi", serif;
+  margin: 0 0 0 38px;
+  font-size: 28px;
+  font-weight: lighter;
+  color: #474747;
+}

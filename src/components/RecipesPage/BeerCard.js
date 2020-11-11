@@ -1,12 +1,29 @@
+/* eslint-disable camelcase */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React from "react";
+import "./beerCard.css";
 
 function BeerCard(props) {
-  const { name, imageUrl } = props;
+  // eslint-disable-next-line camelcase
+  const { name, image_url, tagline, description, abv, ibu, ebc } = props;
+
   return (
-    <div>
-      <h1>{name}</h1>
-      <img src={imageUrl} alt="" />
+    <div className="cardContainer">
+      <div className="product-img">
+        <img src={image_url} height="50%" alt="" />
+      </div>
+      <div className="product-info">
+        <div className="product-text">
+          <h1>{name}</h1>
+          <h2>{tagline}</h2>
+          <p>{description}</p>
+        </div>
+        <div className="">
+          <span>{abv}</span>
+          <span>{ibu}</span>
+          <span>{ebc}</span>
+        </div>
+      </div>
     </div>
   );
 }
