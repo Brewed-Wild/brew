@@ -10,7 +10,7 @@ function BeerCard(props) {
   return (
     <div className="cardContainer">
       <div className="product-img">
-        <img src={image_url} height="50%" alt="" />
+        <img src={image_url} height="60%" alt="" />
       </div>
       <div className="product-info">
         <div className="product-text">
@@ -18,10 +18,10 @@ function BeerCard(props) {
           <h2>{tagline}</h2>
           <p>{description}</p>
         </div>
-        <div className="">
-          <span>{abv}</span>
-          <span>{ibu}</span>
-          <span>{ebc}</span>
+        <div className="beerIndicators">
+          <span>abv:{abv}</span>
+          <span>ibu:{ibu}</span>
+          <span>ebc:{ebc}</span>
         </div>
       </div>
     </div>

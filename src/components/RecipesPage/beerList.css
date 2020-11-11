@@ -1,6 +1,26 @@
 .cardsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
   grid-gap: 30px;
-  margin: 1rem;
+  margin: 1rem 6rem;
+}
+
+/* #avaiableFonts {
+  font-family: "Blinker", sans-serif;
+  font-family: "Do Hyeon", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+} */
+
+@media only screen and (max-width: 1480px) {
+  .cardsGrid {
+    margin: 1rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 1413px) {
+  .cardsGrid {
+    margin: 1rem 0.5rem;
+  }
 }

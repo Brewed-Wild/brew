@@ -1,14 +1,16 @@
 .cardContainer {
+  height: 360px;
+  width: 600px;
+  border-radius: 1rem;
+  border: solid 0.5px #d2d2d238;
+
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0.5rem;
-  margin: 0.5rem;
-  height: 360px;
-  width: 500px;
-  margin: 50px auto;
-  border-radius: 7px 7px 7px 7px;
+  margin: 0.5rem auto;
+
   background: rgb(226, 226, 226);
   background: linear-gradient(
     0deg,
@@ -25,77 +27,69 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 420px;
+  height: 360px;
   width: 207px;
-}
-
-.product-img img {
-  border-radius: 7px 0 0 7px;
 }
 
 .product-info {
   float: left;
   height: 360px;
-  width: 347px;
+  width: 450px;
   border-radius: 1rem;
-  background-color: #fafafa;
+  background-color: #fafafa82;
+  border: solid 0.5px #d2d2d238;
 }
 
 .product-text {
   height: 300px;
-  width: 327px;
+  width: 450px;
+  /* padding: 1rem; */
 }
 
 .product-text h1 {
-  margin: 0 0 0 38px;
-  padding-top: 2rem;
-  font-size: 30px;
-  color: #474747;
-}
-
-.product-text h1,
-.product-price-btn p {
-  font-family: "Do Hyeon", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  padding-top: 0.4rem;
+  margin: 0.5rem 0.5rem;
+  font-size: 28px;
+  color: #648381;
+  text-shadow: 1px 1px 2px #ccc;
 }
 
 .product-text h2 {
-  margin: 1rem 0 1rem 1rem;
-  color: #a2a2a2;
-  letter-spacing: 0.2em;
+  margin: 0.8rem 0 0.8rem 0;
+  color: #8e8e8e;
+  letter-spacing: 0.1em;
+  font-size: 15px;
+  font-weight: 600;
   font-family: "Raleway", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
   /* text-transform: uppercase; */
 }
 
 .product-text p {
-  height: 200px;
-  margin: 0 0 0 0;
-  padding: 0.8rem 1.5rem;
+  height: 190px;
+  padding: 0.6rem 1.5rem;
   color: #8d8d8d;
-  line-height: 1.7em;
-  overflow: hidden;
-  font-family: "Cabin", sans-serif;
+  line-height: 1.8em;
+  overflow: auto;
   font-size: 15px;
   font-weight: lighter;
   text-align: justify;
+  letter-spacing: 0.02em;
+  font-family: "Cabin", sans-serif;
 }
 
-.product-price-btn {
-  height: 103px;
-  width: 327px;
-  margin-top: 17px;
-  position: relative;
+.beerIndicators {
+  width: 450px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  font-family: "Do Hyeon", sans-serif;
+  color: #648381;
+  margin-top: 1.5rem;
+  letter-spacing: 0.05em;
 }
 
-.product-price-btn p {
-  display: inline-block;
-  position: absolute;
-  top: -13px;
-  height: 50px;
-  font-family: "Trocchi", serif;
-  margin: 0 0 0 38px;
-  font-size: 28px;
-  font-weight: lighter;
-  color: #474747;
+.beerIndicators span {
+  padding: 0 1rem;
 }
