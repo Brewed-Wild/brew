@@ -1,11 +1,11 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
-import HomePage from './components/HomePage/HomePage';
-import BeerList from './components/RecipesPage/BeerList';
-import About from './components/AboutPage/AboutPage';
-import Footer from './components/Footer/Footer';
-import './App.css';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import HomePage from "./components/HomePage/HomePage";
+import BeerList from "./components/RecipesPage/BeerList";
+import About from "./components/AboutPage/AboutPage";
+import Footer from "./components/Footer/Footer";
+import "./App.css";
 
 function App() {
   return (
@@ -18,7 +18,6 @@ function App() {
       </Switch>
       <Footer />
     </div>
-
   );
 }
 

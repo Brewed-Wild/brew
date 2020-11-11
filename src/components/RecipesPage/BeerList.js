@@ -8,6 +8,7 @@ import "./beerList.css";
 
 class BeerList extends React.Component {
   state = {
+    beerRecipeSearchValue: "",
     beers: [],
   };
 
@@ -22,14 +23,45 @@ class BeerList extends React.Component {
     // console.log(response);
   };
 
+  beerRecipeSearchHandler = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+    console.log(event.target);
+    console.log(event.target.name);
+    console.log(event.target.value);
+  };
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(event.target);
+    console.log(event.target.name);
+    console.log(event.target.value);
+  };
+
+  handleButtonClick = (event) => {
+    console.log(event.target);
+  };
+
   render() {
     return (
-      <div className="cardsGrid">
-        {/* <button onClick={this.getBeers}>Click To Retreive</button> */}
-        {this.state.beers.map((beer) => (
-          <BeerCard {...beer} key={beer.id} />
-        ))}
-      </div>
+      <section>
+        <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            className="searchBar"
+            onChange={this.beerRecipeSearchHandler}
+          />
+          <button type="submit"> submit </button>
+        </form>
+        <div className="cardsGrid">
+          {this.state.beers
+            .filter((item) =>
+              item.name.includes(this.state.beerRecipeSearchValue)
+            )
+            .map((beer) => (
+              <BeerCard {...beer} key={beer.id} />
+            ))}
+        </div>
+      </section>
     );
   }
 }

@@ -1,3 +1,8 @@
+body {
+  margin-top: 2rem;
+  background-image: url("../../Assets/3459069-01.svg");
+}
+
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));

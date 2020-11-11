@@ -6,10 +6,15 @@ import {
   Switch,
   NavLink,
 } from "react-router-dom";
+import BeerCard from "./BeerCard";
 
 class RecipesPage extends React.Component {
   render() {
-    return <h1>Recipes</h1>;
+    return (
+      <div>
+        <BeerCard />
+      </div>
+    );
   }
 }
 
