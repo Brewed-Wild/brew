@@ -16,10 +16,11 @@ form{
   height: 40px;
 }
 
-.logo-footer{
-  width: 100%;
-  height:200%
+.social-icon:hover{
+  fill: #1877F2;
 }
+
+
 
 #userMessage{
   height: 100px;
