@@ -7,21 +7,56 @@ form{
   margin: 15px;
 }
 
-.invisible{
-  display:none;
-}
-
-.social-icon{
-  width: 40px;
-  height: 40px;
-}
-
-.social-icon:hover{
-  fill: #1877F2;
-}
-
-
-
 #userMessage{
   height: 100px;
 }
+
+.invisible{
+  display:none;
+}
+.social-icons{
+  height: 100%
+}
+
+.social-icon{
+  opacity: .7;
+  height: 30px;
+}
+
+.social-icon:hover {
+  height: 37px;
+  opacity: .9;
+  transition: .2s
+}
+
+.logo-footer{
+  opacity: 0.7;
+  height: 90px;
+}
+
+.wild-logo, .fixee-logo{
+  opacity: .7;
+  height: 40px;
+
+}
+
+.sali-logo, .easytech-logo{
+  opacity: .6;
+  margin: 1em;
+  height: 50px
+}
+
+.sali-logo:hover, .wild-logo:hover, .logo-footer:hover, .easytech-logo:hover, .fixee-logo{
+  transition: 1s;
+  opacity: .9;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+h6{
+  color: #aaa;
+}
+
