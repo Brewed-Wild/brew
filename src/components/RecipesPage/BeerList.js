@@ -1,70 +1,133 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/state-in-constructor */
-import React from "react";
-import axios from "axios";
-import BeerCard from "./BeerCard";
-import "./beerList.css";
+import React from 'react';
+import axios from 'axios';
+import BeerCard from './BeerCard';
+import SearchBar from './SearchBar';
+// import { Slider } from "shards-react";
 
-class BeerList extends React.Component {
+import './beerList.css';
+
+class BeerList extends React.Component{
   state = {
-    beerRecipeSearchValue: "",
-    beers: [],
-  };
+    greaterThanAbv: 0,
+    lessThanAbv: 20,
 
-  componentDidMount() {
-    this.getBeers();
+    greaterThanIbu: 0,
+    lessThanIbu: 40,
+
+    greaterThanEbc: 0,
+    lessThanEbc: 80,
+
+    beers: []
+
+    // value: [20, 80],
   }
 
-  getBeers = () => {
-    axios
-      .get("https://api.punkapi.com/v2/beers/")
-      .then((response) => this.setState({ beers: response.data }));
-    // console.log(response);
-  };
+componentDidMount() {
+    this.getBeers()
+    
+}
 
-  beerRecipeSearchHandler = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
-    console.log(event.target);
-    console.log(event.target.name);
-    console.log(event.target.value);
-  };
+getBeers = () => {
+    axios.get('https://api.punkapi.com/v2/beers/')
+        .then(response => this.setState({ beers : response.data }))
+}
+getBeersSearch = (event) => {
+    const { lessThanAbv, greaterThanAbv, lessThanIbu, greaterThanIbu, greaterThanEbc,lessThanEbc} = this.state;
+    const {name, value} = event.target;
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(event.target);
-    console.log(event.target.name);
-    console.log(event.target.value);
-  };
+    this.setState({ [name]: value }, () => {
 
-  handleButtonClick = (event) => {
-    console.log(event.target);
-  };
+        axios.get(`https://api.punkapi.com/v2/beers?abv_lt=${lessThanAbv}&abv_gt=${greaterThanAbv}&ibu_lt=${lessThanIbu}&ibu_gt${greaterThanIbu}&ebc_lt=${lessThanEbc}&ebc_gt${greaterThanEbc}`)
+            .then(response => this.setState({ beers : response.data }))      
+    })
+}
 
-  render() {
-    return (
-      <section>
-        {/* <SliderFilter /> */}
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            className="searchBar"
-            onChange={this.beerRecipeSearchHandler}
-          />
-          <button type="submit"> submit </button>
-        </form>
-        <div className="cardsGrid">
-          {this.state.beers
-            .filter((item) =>
-              item.name.includes(this.state.beerRecipeSearchValue)
-            )
-            .map((beer) => (
-              <BeerCard {...beer} key={beer.id} />
-            ))}
-        </div>
-      </section>
-    );
-  }
+ 
+// {/* slider from designrevision */}
+//   handleSlide(event) {
+//     this.setState({
+//       value: [parseFloat(event[0]), parseFloat(event[1])]
+//     });
+//   }
+
+
+  
+// {/* slider from Bootstrap */}
+// $('#multi17').mdbRange({
+//   single: {
+//     active: true,
+//     multi: {
+//       active: true,
+//       rangeLength: 2
+//     }
+//   }
+// });
+
+// $('#multi18').mdbRange({
+//   single: {
+//     active: false,
+//     multi: {
+//       active: true,
+//       rangeLength: 3
+//     }
+//   }
+// });
+
+
+
+
+render() {
+return (
+
+<section>
+    
+    
+  {/* slider from Bootstrap */}
+  {/* <form class="multi-range-field my-5 pb-5">
+    <input id="multi17" class="multi-range" type="range" />
+  </form>
+
+  <form class="multi-range-field my-5 pb-5">
+    <input id="multi18" class="multi-range" type="range" />
+  </form> */}
+
+  {/* slider from designrevision */}
+  {/* <Slider
+    connect
+    onSlide={this.handleSlide}
+    start={this.state.value}
+    range={{ min: 0, max: 100 }}
+  /> */}
+
+  <div>
+      <SearchBar 
+      searchBeer={this.getBeersSearch}
+      greaterThanAbv={this.state.greaterThanAbv}
+      lessThanAbv={this.state.lessThanAbv}
+      greaterThanIbu={this.state.greaterThanIbu}
+      lessThanIbu={this.state.lessThanIbu}
+      greaterThanEbc={this.state.greaterThanEbc}
+      lessThanEbc={this.state.lessThanEbc}
+      
+      />
+      
+  <div>
+      {/* <button onClick={this.getBeersSearch}>Click To Retreive Filtered Beers</button> */}
+      {this.state.beers.map(beer => (
+          <div className="Card">
+          <BeerCard {...beer} key={beer.id}/>
+          </div>                      
+      ))}
+      
+  </div>    
+</div>
+</section>
+        
+    )
+}
 }
 
 export default BeerList;

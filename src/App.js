@@ -11,7 +11,7 @@ import FontExample from "./components/RecipesPage/FontExample";
 function App() {
   return (
     <div className="App">
-      <FontExample />
+      {/* <FontExample /> */}
       <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage} />
