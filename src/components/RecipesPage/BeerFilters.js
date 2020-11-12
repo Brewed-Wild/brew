@@ -7,15 +7,19 @@ import BeerCard from './BeerCard';
 import './BeerFilters.css';
 
 
+
 export default class BeerFilters extends React.Component {
     state = {
       beers: [],
+      abv: 10,
+      ibu: 20,
+      ebc: 40,
       abvMin: 0,
-      abvMax: 20,
+      abvMax: 10,
       ibuMin: 0,
-      ibuMax: 40,
+      ibuMax: 20,
       ebcMin: 0,
-      ebcMax: 80,
+      ebcMax: 40,
     }
 
     componentDidMount() {
@@ -29,10 +33,18 @@ export default class BeerFilters extends React.Component {
 
     handleChange = (event) => {
       const { abvMin, abvMax, ibuMin, ibuMax, ebcMin, ebcMax } = this.state;
-      this.setState({ [event.target.name]: event.target.value }, () => {
+      this.setState({ [event.target.name]: event.target.value,
+                      abvMin: this.state.abv - 2.5,
+                      abvMax: this.state.abv + 2.5,
+                      ibuMin: this.state.ibu - 5,
+                      ibuMax: this.state.ibu + 5,
+                      ebcMin: this.state.ebc - 10,
+                      ebcMax: this.state.ebc + 10},
+        () => {
         axios.get(`https://api.punkapi.com/v2/beers?abv_lt=${abvMax}&abv_gt=${abvMin}&ibu_lt=${ibuMax}&ibu_gt${ibuMin}&ebc_lt=${ebcMax}&ebc_gt${ebcMin}`)
           .then((response) => this.setState({ beers: response.data }));
       })
+
     }
 
     render() {
@@ -40,16 +52,18 @@ export default class BeerFilters extends React.Component {
         <div>
           <h6>ABV</h6>
           <div class="slidecontainer">
-          <input name="abv" type="range" min="1" max="20" value={this.state.abvMax} class="slider" id="myRange" />
+          <input name="abv" type="range" min="1" max="20" value={this.state.abv} onChange={this.handleChange} class="slider" id="myRange" />
+          <input name="ibu" type="range" min="1" max="20" value={this.state.ibu} onChange={this.handleChange} class="slider" id="myRange" />
+          <input name="ebc" type="range" min="1" max="20" value={this.state.ebc} onChange={this.handleChange} class="slider" id="myRange" />
           </div>
-          <input name="abvMin" type="text" onChange={this.handleChange} value={this.state.abvMin} placeholder="ABV min" className="abv-min" />
+          {/* <input name="abvMin" type="text" onChange={this.handleChange} value={this.state.abvMin} placeholder="ABV min" className="abv-min" />
           <input name="abvMax" type="text" onChange={this.handleChange} value={this.state.abvMax} placeholder="ABV max" className="abv-max" />
           <h6>IBU</h6>
           <input name="ibuMin" type="text" onChange={this.handleChange} value={this.state.ibuMin} placeholder="ABV min" className="abv-min" />
           <input name="ibuMax" type="text" onChange={this.handleChange} value={this.state.ibuMax} placeholder="ABV max" className="abv-max" />
           <h6>EBC</h6>
           <input name="ebcMin" type="text" onChange={this.handleChange} value={this.state.ebcMin} placeholder="ABV min" className="abv-min" />
-          <input name="ebcMax" type="text" onChange={this.handleChange} value={this.state.ebcMax} placeholder="ABV max" className="abv-max" />
+          <input name="ebcMax" type="text" onChange={this.handleChange} value={this.state.ebcMax} placeholder="ABV max" className="abv-max" /> */}
           <hr />
           {this.state.beers.map((beer) => (
             <div className="Card">
