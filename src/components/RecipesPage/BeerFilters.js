@@ -34,12 +34,12 @@ export default class BeerFilters extends React.Component {
     handleChange = (event) => {
       const { abvMin, abvMax, ibuMin, ibuMax, ebcMin, ebcMax } = this.state;
       this.setState({ [event.target.name]: event.target.value,
-                      abvMin: this.state.abv - 2.5,
-                      abvMax: this.state.abv + 2.5,
-                      ibuMin: this.state.ibu - 5,
-                      ibuMax: this.state.ibu + 5,
-                      ebcMin: this.state.ebc - 10,
-                      ebcMax: this.state.ebc + 10},
+                      abvMin: this.state.abv * 1 - 2.5,
+                      abvMax: this.state.abv * 1 + 2.5,
+                      ibuMin: this.state.ibu * 1 - 5,
+                      ibuMax: this.state.ibu * 1 + 5,
+                      ebcMin: this.state.ebc * 1 - 10,
+                      ebcMax: this.state.ebc * 1 + 10},
         () => {
         axios.get(`https://api.punkapi.com/v2/beers?abv_lt=${abvMax}&abv_gt=${abvMin}&ibu_lt=${ibuMax}&ibu_gt${ibuMin}&ebc_lt=${ebcMax}&ebc_gt${ebcMin}`)
           .then((response) => this.setState({ beers: response.data }));
@@ -53,8 +53,8 @@ export default class BeerFilters extends React.Component {
           <h6>ABV</h6>
           <div class="slidecontainer">
           <input name="abv" type="range" min="1" max="20" value={this.state.abv} onChange={this.handleChange} class="slider" id="myRange" />
-          <input name="ibu" type="range" min="1" max="20" value={this.state.ibu} onChange={this.handleChange} class="slider" id="myRange" />
-          <input name="ebc" type="range" min="1" max="20" value={this.state.ebc} onChange={this.handleChange} class="slider" id="myRange" />
+          <input name="ibu" type="range" min="1" max="40" value={this.state.ibu} onChange={this.handleChange} class="slider" id="myRange" />
+          <input name="ebc" type="range" min="1" max="80" value={this.state.ebc} onChange={this.handleChange} class="slider" id="myRange" />
           </div>
           {/* <input name="abvMin" type="text" onChange={this.handleChange} value={this.state.abvMin} placeholder="ABV min" className="abv-min" />
           <input name="abvMax" type="text" onChange={this.handleChange} value={this.state.abvMax} placeholder="ABV max" className="abv-max" />
