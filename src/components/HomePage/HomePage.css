@@ -39,6 +39,7 @@ button{
   justify-content: center;
   position: relative;
   margin-top: 2%;
+  flex-wrap: wrap;
   
 }
 
@@ -46,16 +47,17 @@ button{
   /* opacity: 0.5; */
  
   width: 340px;
+  border-radius: 2px;
   
   box-shadow: 0px 0px 5px 0px #666;
 }
 
 .card1, .card2, .card3{
-  margin: 0 2% 0 2%;
+  margin: 0 2% 2% 2%;
   border-style: solid;
   width: 350px;
   height: 500px;
-  display: inline;
+  /* display: inline; */
   background-color: #e4fde125;
   border-radius: 1em;
   box-shadow: 1px 1px 11px 1px #bbb;
@@ -94,6 +96,6 @@ body {
 
 }
 .carousel-item{
-  height: 450px;
+  max-height: 500px;
 }
 
