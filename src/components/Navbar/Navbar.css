@@ -1,7 +1,23 @@
 .navbar {
     font-family: 'Poppins', sans-serif;
+    height: 70px;
+    background: linear-gradient(to top right, #cccccc 26%, #aaaaaa 59%);
 }
 
-a:hover {
-    text-shadow: 1px 1px 1px #00000025;
+form{
+  margin-left: 30px;
+}
+
+#navbar #nav-div a:focus, #nav-div a:active{
+  background-color:#eee;
+  box-shadow: 0px 1px 4px 0px #51585e;
+  color: #000;
+}
+
+#navbar a:hover span, #navbar a:focus span  {
+  color:black;
+}
+
+#navbar #nav-div a:hover{
+  box-shadow: 0px 0px 1px 0px #51585e;
 }

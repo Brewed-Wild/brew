@@ -3,6 +3,7 @@
 /* eslint-disable react/state-in-constructor */
 import React from 'react';
 import axios from 'axios';
+import Searchbar from '../Searchbar';
 import BeerCard from './BeerCard';
 import './beerList.css';
 
@@ -70,9 +71,7 @@ export default class BeerFilters extends React.Component {
               <BeerCard {...beer} key={beer.id} />
             </div>
           ))}
-
         </div>
-
       );
     }
 }
