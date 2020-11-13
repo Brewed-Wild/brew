@@ -9,7 +9,7 @@ import Facebook from '../../Assets/facebook.svg';
 import Instagram from '../../Assets/instagram.svg';
 import SaliSali from '../../Assets/SaliSali.png';
 import Easytech from '../../Assets/EasyTech_logo.svg';
-import Fixee from '../../Assets/Fixee.png';
+import Fixee from '../../Assets/Fixee.svg';
 
 class Footer extends React.Component {
   state = {
