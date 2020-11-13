@@ -131,3 +131,100 @@ return (
 }
 
 export default BeerList;
+
+
+
+
+
+
+// class BeerList extends React.Component {
+//   state = {
+//     greaterThanAbv: 0,
+
+//     greaterThanIbu: 0,
+
+//     greaterThanEbc: 0,
+
+//     beers: [],
+
+//     // value: [20, 80],
+//   }
+
+//   componentDidMount() {
+//     this.getBeers();
+//   }
+
+// getBeers = () => {
+//   axios.get('https://api.punkapi.com/v2/beers')
+//     .then((response) => this.setState({ beers: response.data }));
+// }
+
+// getBeersSearch = (event) => {
+//   // const {
+//   //   lessThanAbv, greaterThanAbv, lessThanIbu, greaterThanIbu, greaterThanEbc, lessThanEbc,
+//   // } = this.state;
+//   const { name, value } = event.target;
+//   this.setState({ [name]: value });
+//   // this.setState({ [name]: value }, () => {
+//   //   axios.get(`https://api.punkapi.com/v2/beers?abv_lt=${lessThanAbv}&abv_gt=${greaterThanAbv}&ibu_lt=${lessThanIbu}&ibu_gt${greaterThanIbu}&ebc_lt=${lessThanEbc}&ebc_gt${greaterThanEbc}`)
+//   //     .then((response) => this.setState({ beers: response.data }));
+//   // });
+// }
+
+// render() {
+//   return (
+//     <div>
+//       <div>
+//         <label>Abv</label>
+//         <input
+//           type="range"
+//           id="Abv"
+//           name="greaterThanAbv"
+//           min="0"
+//           max="20"
+//           onChange={(event) => this.getBeersSearch(event)}
+//           value={this.state.greaterThanAbv}
+//         />
+//       </div>
+//       <div>
+//         <label>Ibu</label>
+//         <input
+//           type="range"
+//           id="Ibu"
+//           name="greaterThanIbu"
+//           min="0"
+//           max="100"
+//           onChange={(event) => this.getBeersSearch(event)}
+//           value={this.state.greaterThanIbu}
+//         />
+//       </div>
+//       <div>
+//         <label>Ebc</label>
+//         <input
+//           type="range"
+//           id="Ebc"
+//           name="greaterThanEbc"
+//           min="0"
+//           max="300"
+//           onChange={(event) => this.getBeersSearch(event)}
+//           value={this.state.greaterThanEbc}
+//         />
+//       </div>
+//       <div>
+//         {this.state.beers.filter(beer => (
+//           beer.abv > this.state.greaterThanAbv && beer.ibu > this.state.greaterThanIbu && beer.ebc > this.state.greaterThanEbc)).map((beer) => (
+//             <div className="Card">
+//               <BeerCard {...beer} key={beer.id} />
+//             </div>
+//           ))}
+//         {/* {this.state.beers.map((beer) => (
+//           <div className="Card">
+//             <BeerCard {...beer} key={beer.id} />
+//           </div>
+//         ))} */}
+//       </div>
+//     </div>
+//   );
+// }
+// }
+// export default BeerList;
