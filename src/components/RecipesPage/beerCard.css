@@ -1,0 +1,95 @@
+.cardContainer {
+  height: 360px;
+  width: 600px;
+  border-radius: 1rem;
+  border: solid 0.5px #d2d2d238;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0.5rem auto;
+
+  background: rgb(226, 226, 226);
+  background: linear-gradient(
+    0deg,
+    rgba(226, 226, 226, 0.8015406846332283) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 360px;
+  width: 207px;
+}
+
+.product-info {
+  float: left;
+  height: 360px;
+  width: 450px;
+  border-radius: 1rem;
+  background-color: #fafafa82;
+  border: solid 0.5px #d2d2d238;
+}
+
+.product-text {
+  height: 300px;
+  width: 450px;
+  /* padding: 1rem; */
+}
+
+.product-text h1 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  padding-top: 0.4rem;
+  margin: 0.5rem 0.5rem;
+  font-size: 28px;
+  color: #648381;
+  text-shadow: 1px 1px 2px #ccc;
+}
+
+.product-text h2 {
+  margin: 0.8rem 0 0.8rem 0;
+  color: #8e8e8e;
+  letter-spacing: 0.1em;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+  /* text-transform: uppercase; */
+}
+
+.product-text p {
+  height: 190px;
+  padding: 0.6rem 1.5rem;
+  color: #8d8d8d;
+  line-height: 1.8em;
+  overflow: auto;
+  font-size: 15px;
+  font-weight: lighter;
+  text-align: justify;
+  letter-spacing: 0.02em;
+  font-family: "Cabin", sans-serif;
+}
+
+.beerIndicators {
+  width: 450px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  font-family: "Do Hyeon", sans-serif;
+  color: #648381;
+  margin-top: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.beerIndicators span {
+  padding: 0 1rem;
+}
