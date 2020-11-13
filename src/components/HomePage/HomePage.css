@@ -6,8 +6,6 @@
   display: flex;
 }
 
-
-
 .textButton{
 position: absolute;
 width: 100%;
@@ -17,14 +15,10 @@ padding-top: 7%;
 font-size: 300%;
 }
 
-
-
 button{
   background:  rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   border:none
-  
-  
   }
 
   button:hover  {
@@ -45,7 +39,6 @@ button{
 
 .img1, .img2, .img3 {
   /* opacity: 0.5; */
- 
   width: 340px;
   border-radius: 2px;
   
@@ -63,8 +56,6 @@ button{
   box-shadow: 1px 1px 11px 1px #bbb;
   line-height: 2em;
   border-width: 1px;
-  
-  
 }
 .card1:hover{
 background-color: rgb(211, 211, 193);
