@@ -37,20 +37,20 @@ class Footer extends React.Component {
             <a href= "http://www.facebook.com"><img src={Facebook} alt="" className="social-icon m-3" /></a>
             <a href= "http://www.instagram.com"><img src={Instagram} alt="" className="social-icon m-3" /></a>
           </div>
-          <div className="col d-flex align-self-start justify-content-center" id="our-partners">
+          <div className="col d-flex align-self-start justify-content-start" id="our-partners">
             <p>
-              <h6 className="">Our Partners</h6>
+              <h6 className="pt-3">Our Partners</h6>
               <div className="partner-logo-container d-inline-grid justify-self-center">
 
                 <a href="https://www.raspberrypi.org/"><img className= "easytech-logo" src={Easytech} alt="" /></a>
-                <a href=""></a><img className= "fixee-logo" src={Fixee} alt="" />
+                <a href="https://handyman.com/"><img className= "fixee-logo" src={Fixee} alt="" /></a>
                 {/* <img className="wild-logo" src="https://res.cloudinary.com/wildcodeschool/image/upload/c_fill,h_50/v1/static/irjoy97aq0eol8bf6959" /> */}
-                <img className= "sali-logo" src={SaliSali} alt="" />
+                <a href="https://magicseaweed.com/"><img className= "sali-logo" src={SaliSali} alt="" /></a>
               </div>
 
             </p>
           </div>
-          <div className="col-3.5 d-md-flex flex-column mr-2" id="contact-us">
+          <div className="col-3.5 d-md-flex flex-column mr-2 pt-3" id="contact-us">
             <p className="text-right mr-4">
               <h6>Start a conversation</h6>
               <p>
