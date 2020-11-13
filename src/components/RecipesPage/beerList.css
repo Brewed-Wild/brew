@@ -218,10 +218,6 @@ body {
   opacity: 1; /* Fully shown on mouse-over */
 }
 
-<<<<<<< HEAD
-.imgBeer{
-    height: 60px;
-=======
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
@@ -231,7 +227,6 @@ body {
   height: 25px; /* Slider handle height */
   background: #df7c2c; /* Green background */
   cursor: pointer; /* Cursor on hover */
->>>>>>> develop
 }
 
 .slider::-moz-range-thumb {

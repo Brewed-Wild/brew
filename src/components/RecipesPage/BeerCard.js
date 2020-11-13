@@ -8,11 +8,6 @@ function BeerCard(props) {
   const { name, image_url, tagline, description, abv, ibu, ebc } = props;
 
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>{name}</h1>
-      <img className="imgBeer" src={imageUrl} alt="" />
-=======
     <div className="cardContainer">
       <div className="product-img">
         <img src={image_url} height="60%" alt="" />
@@ -29,7 +24,6 @@ function BeerCard(props) {
           <span>ebc:{ebc}</span>
         </div>
       </div>
->>>>>>> develop
     </div>
   );
 }
