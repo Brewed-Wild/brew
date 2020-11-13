@@ -24,15 +24,15 @@ class Navbar extends React.Component {
           </div>
         </div>
         <nav className="navbar d-flex navbar-dark bg-secondary py-0" height="100" id="navbar">
-          <Link to="/" className="d-none d-md-flex h-100">
-            <img src={Logo} alt="" className="d-none d-md-flex h-100" />
+          <Link to="/" className="d-none d-md-flex ">
+            <img src={Logo} alt="" className="d-none d-md-flex" />
           </Link>
-          <div id="nav-div" className="d-none d-md-flex  h-100 align-items-stretch">
-            <Link className="navlink dropdown-item mt-50 text-light h-100 pt-30 pb-0 align-self-center" aria-pressed="true" exact to="/"><span>Home</span></Link>
+          <div id="nav-div" className="d-none d-md-flex  h-100">
+            <Link className="dropdown-item mt-50 text-light h-100 pt-30 pb-0 align-self-center d-flex" aria-pressed="true" exact to="/"><span className="navlink-text align-self-center">Home</span></Link>
             {/* <div className="dropdown-divider" /> */}
-            <Link className="navlink dropdown-item mt-50 text-light h-100 pb-0 align-self-center" to="/beerlist"><span>Beer</span></Link>
+            <Link className="dropdown-item mt-50 text-light h-100 pb-0 align-self-center d-flex" to="/beerlist"><span className="align-self-center">All Beers</span></Link>
             {/* <div className="dropdown-divider bg-secondary" /> */}
-            <Link className="navlink dropdown-item mt-50 text-light h-100 pb-0 align-self-center" to="/about"><span>About</span></Link>
+            <Link className=" dropdown-item mt-50 text-light h-100 pb-0 align-self-center d-flex" to="/about"><span className="align-self-center">About</span></Link>
             <div className="w-3 pl-20" />
             <Searchbar searchBeers={this.props.searchBeersApp} />
           </div>

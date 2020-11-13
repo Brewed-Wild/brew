@@ -1,6 +1,7 @@
 .navbar {
     font-family: 'Poppins', sans-serif;
     height: 70px;
+    background: linear-gradient(to top right, #cccccc 26%, #aaaaaa 59%);
 }
 
 form{
@@ -8,8 +9,8 @@ form{
 }
 
 #navbar #nav-div a:focus, #nav-div a:active{
-  background-color:#EFAD1B;
-  box-shadow: 2px 2px 4px 2px #51585e;
+  background-color:#eee;
+  box-shadow: 0px 1px 4px 0px #51585e;
   color: #000;
 }
 
@@ -18,10 +19,5 @@ form{
 }
 
 #navbar #nav-div a:hover{
-  box-shadow: 2px 2px 4px 2px #51585e;
-}
-
-
-.navlink{
-  margin-top: 29px;
+  box-shadow: 0px 0px 1px 0px #51585e;
 }
