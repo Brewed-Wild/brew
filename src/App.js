@@ -6,6 +6,8 @@ import BeerList from './components/RecipesPage/BeerList';
 import About from './components/AboutPage/AboutPage';
 import Footer from './components/Footer/Footer';
 import './App.css';
+import BeerFilters from './components/RecipesPage/BeerList';
+import FontExample from "./components/RecipesPage/FontExample";
 
 class App extends React.Component {
   state = {
@@ -26,7 +28,6 @@ class App extends React.Component {
       </Switch>
       <Footer />
     </div>
-
   );
   }
   
