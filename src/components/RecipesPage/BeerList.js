@@ -54,6 +54,7 @@ render() {
           onChange={(event) => this.getBeersSearch(event)}
           value={this.state.greaterThanAbv}
         />
+        <label>{this.state.greaterThanAbv}</label>
       </div>
       <div>
         <label>Ibu</label>
@@ -66,6 +67,7 @@ render() {
           onChange={(event) => this.getBeersSearch(event)}
           value={this.state.greaterThanIbu}
         />
+        <label>{this.state.greaterThanIbu}</label>
       </div>
       <div>
         <label>Ebc</label>
@@ -78,6 +80,7 @@ render() {
           onChange={(event) => this.getBeersSearch(event)}
           value={this.state.greaterThanEbc}
         />
+        <label>{this.state.greaterThanEbc}</label>
       </div>
       <div>
         {this.state.beers.filter(beer => (
