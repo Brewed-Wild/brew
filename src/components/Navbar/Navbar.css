@@ -1,0 +1,7 @@
+.navbar {
+    font-family: 'Poppins', sans-serif;
+}
+
+a:hover {
+    text-shadow: 1px 1px 1px #00000025;
+}

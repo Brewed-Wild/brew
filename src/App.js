@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import HomePage from './components/HomePage/HomePage';
+import BeerList from './components/RecipesPage/BeerList';
+import About from './components/AboutPage/AboutPage';
+import Footer from './components/Footer/Footer';
 import './App.css';
+import BeerFilters from './components/RecipesPage/BeerList';
+import FontExample from "./components/RecipesPage/FontExample";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <FontExample /> */}
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/beerfilters" component={BeerFilters} />
+        <Route path="/about" component={About} />
+      </Switch>
+      <Footer />
     </div>
   );
 }
