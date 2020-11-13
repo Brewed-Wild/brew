@@ -1,21 +1,245 @@
-.Card{
 
-display: flex;
-display: inline-block;
-justify-content: center;
-text-align: center;
-width: 20%;
-
+body {
+  margin-top: 2rem;
+  background-image: url("../../Assets/3459069-01.svg");
 }
 
-img{
-    height: 60px;
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
+  grid-gap: 30px;
+  margin: 1rem 6rem;
 }
 
-h1{
-    font-size: 15px;
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
 }
 
-link{
-    margin-right: 10px;
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  border-radius: 50%;
+  width: 50%; /* Full-width */
+  height: 10px; /* Specified height */
+  margin: 20px;
+  background: #cfcec9; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .5s; /* 0.2 seconds transition on hover */
+  transition: opacity .5s;
 }
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  border-radius: 50%;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #df7c2c; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #20333B; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* #avaiableFonts {
+  font-family: "Blinker", sans-serif;
+  font-family: "Do Hyeon", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+} */
+body {
+  margin-top: 2rem;
+  background-image: url("../../Assets/3459069-01.svg");
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
+  grid-gap: 30px;
+  margin: 1rem 6rem;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  border-radius: 50%;
+  width: 50%; /* Full-width */
+  height: 10px; /* Specified height */
+  margin: 20px;
+  background: #cfcec9; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .5s; /* 0.2 seconds transition on hover */
+  transition: opacity .5s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  border-radius: 50%;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #df7c2c; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #20333B; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* #avaiableFonts {
+  font-family: "Blinker", sans-serif;
+  font-family: "Do Hyeon", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+} */
+body {
+  margin-top: 2rem;
+  background-image: url("../../Assets/3459069-01.svg");
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
+  grid-gap: 30px;
+  margin: 1rem 6rem;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  border-radius: 50%;
+  width: 50%; /* Full-width */
+  height: 10px; /* Specified height */
+  margin: 20px;
+  background: #cfcec9; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .5s; /* 0.2 seconds transition on hover */
+  transition: opacity .5s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  border-radius: 50%;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #df7c2c; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #20333B; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* #avaiableFonts {
+  font-family: "Blinker", sans-serif;
+  font-family: "Do Hyeon", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+} */
+body {
+  margin-top: 2rem;
+  background-image: url("../../Assets/3459069-01.svg");
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
+  grid-gap: 30px;
+  margin: 1rem 6rem;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  border-radius: 50%;
+  width: 50%; /* Full-width */
+  height: 10px; /* Specified height */
+  margin: 20px;
+  background: #cfcec9; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .5s; /* 0.2 seconds transition on hover */
+  transition: opacity .5s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  border-radius: 50%;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #df7c2c; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #20333B; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* #avaiableFonts {
+  font-family: "Blinker", sans-serif;
+  font-family: "Do Hyeon", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+} */
