@@ -1,15 +1,21 @@
-// import React from 'react';
-// import './RecipesPage.css';
-// import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
+import React from "react";
+import "./RecipesPage.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  NavLink,
+} from "react-router-dom";
+import BeerCard from "./BeerCard";
 
-// class RecipesPage extends React.Component {
+class RecipesPage extends React.Component {
+  render() {
+    return (
+      <div>
+        <BeerCard />
+      </div>
+    );
+  }
+}
 
-//     render () {
-//         return (
-//             <h1>Recipes</h1>
-
-//         )
-//     }
-// }
-
-// export default RecipesPage;
+export default RecipesPage;
