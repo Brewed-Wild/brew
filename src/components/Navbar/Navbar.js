@@ -8,7 +8,7 @@ class Navbar extends React.Component {
     return (
       <div>
         <Link exact to="/">Home</Link>
-        <Link to="/beerlist">Beer</Link>
+        <Link to="/beerfilters">Beer</Link>
         <Link to="/about">About</Link>
       </div>
     );
