@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './beerdetails.css';
 
 const BeerDetails = (props) => {
   const params = props.match.params;
@@ -12,17 +13,26 @@ const BeerDetails = (props) => {
 
   React.useEffect (()=>{
     getBeer()
-    // console.log(currentBeer)
-  },[])
+    console.log(currentBeer)
+  },[params.id])
+
   
   return(
-    <div height="200px">
-      {console.log(currentBeer.name)}
+    <div className="beer-details">
+      <div className='beer-titles'>
       <h1>{currentBeer.name}</h1>
-      <img src={currentBeer.image_url} alt={currentBeer.name} />
-      <p>
-        <b>{currentBeer.description}</b>
-        {/* <span>{currentBeer.ingredients.hops[0].name}</span> */}
+      <h4>{currentBeer.tagline}</h4>
+      </div>
+      <img className="product-image" src={currentBeer.image_url} alt={currentBeer.name} />
+      <p className="details-text">
+        <p>{currentBeer.description}</p>
+        {/* <span>{currentBeer.ingredients.hops&& currentBeer.ingredients.hops.map((hop) => (<span>{hop.name}</span>))}</span> */}
+        <span> Goes well with 
+          {currentBeer.food_pairing&& currentBeer.food_pairing.map((food) => (
+            <span> {food.toLowerCase()}, </span>
+          ))}
+          and similar foods.
+        </span>
       </p>
 
     </div>

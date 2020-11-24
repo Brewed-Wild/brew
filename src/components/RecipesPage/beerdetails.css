@@ -1,0 +1,58 @@
+html, body{
+  height: 100%
+}
+.beer-details{
+  height:100%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: solid 0.5px #d2d2d238;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0.5rem auto;
+
+  background: rgb(226, 226, 226);
+  background: linear-gradient(
+    0deg,
+    rgba(226, 226, 226, 0.8015406846332283) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ".             title           title        title            . "
+    "product-image description description description description"
+    "product-image description description description description"
+    ".             description description description description"
+    ".             description description description description"
+    ".             description description description description";
+}
+
+.product-image {
+  height: auto;
+  width: 67px;
+  grid-area: product-image;
+  justify-self: center;
+}
+
+.details-text{
+  grid-area: description;
+  display: block;
+  text-align: left;
+  padding-right: 50px;
+  margin-left: 50px;
+}
+
+.beer-titles{
+  grid-area: title;
+}
