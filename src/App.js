@@ -1,13 +1,13 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
-import HomePage from './components/HomePage/HomePage';
-import BeerList from './components/RecipesPage/BeerList';
-import About from './components/AboutPage/AboutPage';
-import Footer from './components/Footer/Footer';
-import './App.css';
-import BeerFilters from './components/RecipesPage/BeerList';
-import FontExample from "./components/RecipesPage/FontExample";
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import HomePage from "./components/HomePage/HomePage";
+import About from "./components/AboutPage/AboutPage";
+import Footer from "./components/Footer/Footer";
+import "./App.css";
+import BeerFilters from "./components/RecipesPage/BeerList";
+// import BeerList from "./components/RecipesPage/BeerList";
+// import FontExample from "./components/RecipesPage/FontExample";
 
 function App() {
   return (
