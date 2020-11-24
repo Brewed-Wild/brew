@@ -9,19 +9,28 @@ import BeerFilters from "./components/RecipesPage/BeerList";
 // import BeerList from "./components/RecipesPage/BeerList";
 // import FontExample from "./components/RecipesPage/FontExample";
 
-function App() {
-  return (
+class App extends React.Component {
+  state = {
+
+  }
+
+  SetSearch = (event) => {event.target.value;}
+
+
+  render () {
+    return (
     <div className="App">
-      {/* <FontExample /> */}
-      <Navbar />
+      <Navbar searchBeersApp={this.SetSearch}/>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/beerfilters" component={BeerFilters} />
+        <Route path="/beerlist" component={BeerList} searchBeers={this.SetSearch} />
         <Route path="/about" component={About} />
       </Switch>
       <Footer />
     </div>
   );
+  }
+  
 }
 
 export default App;
