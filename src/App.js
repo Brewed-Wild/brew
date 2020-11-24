@@ -5,6 +5,7 @@ import HomePage from './components/HomePage/HomePage';
 import BeerList from './components/RecipesPage/BeerList';
 import About from './components/AboutPage/AboutPage';
 import Footer from './components/Footer/Footer';
+import BeerDetails from "./components/RecipesPage/BeerDetails"
 import './App.css';
 import BeerFilters from './components/RecipesPage/BeerList';
 import FontExample from "./components/RecipesPage/FontExample";
@@ -25,6 +26,7 @@ class App extends React.Component {
         <Route exact path="/" component={HomePage} />
         <Route path="/beerlist" component={BeerList} searchBeers={this.SetSearch} />
         <Route path="/about" component={About} />
+        <Route path="/beers/:id" component={BeerDetails} />
       </Switch>
       <Footer />
     </div>
