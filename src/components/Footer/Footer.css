@@ -1,6 +1,12 @@
 footer{
   padding: 15px;
-  height: 200px;
+  /* height: 200px; */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+
+
 }
 
 form{

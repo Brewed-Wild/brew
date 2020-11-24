@@ -23,6 +23,11 @@ const BeerDetails = (props) => {
       <h1>{currentBeer.name}</h1>
       <h4>{currentBeer.tagline}</h4>
       </div>
+      <div className="beer-values">
+        <span>abv:{currentBeer.abv}</span>
+        <span>ibu:{currentBeer.ibu}</span>
+        <span>ebc:{currentBeer.ebc}</span>
+      </div>
       <img className="product-image" src={currentBeer.image_url} alt={currentBeer.name} />
       <p className="details-text">
         <p>{currentBeer.description}</p>

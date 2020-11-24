@@ -3,7 +3,9 @@ html, body{
 }
 .beer-details{
   height:100%;
-  width: 80%;
+  width: 60%;
+  margin-top: 300px;
+  margin-bottom: 300px;
   margin-left: auto;
   margin-right: auto;
 
@@ -11,8 +13,8 @@ html, body{
 
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: start;
+  text-align: justify;
   padding: 0.5rem;
   margin: 0.5rem auto;
 
@@ -30,19 +32,39 @@ html, body{
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    ".             title           title        title            . "
+    ".             title           title        title     beer-values "
     "product-image description description description description"
     "product-image description description description description"
-    ".             description description description description"
-    ".             description description description description"
-    ".             description description description description";
+    "product-image description description description description"
+    "product-image description description description description"
+    "product-image description description description description";
+}
+
+.beer-values{
+  grid-area: beer-values;
+  width: 450px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  font-family: "Do Hyeon", sans-serif;
+  color: #648381;
+  margin-top: 1.5rem;
+  letter-spacing: 0.05em;
+  align-self: start;
+}
+
+.beer-values span{
+  font-size: 22px;
+  font-weight: 600;
+  margin-right: 30px;
 }
 
 .product-image {
   height: auto;
-  width: 67px;
+  width: 90px;
   grid-area: product-image;
   justify-self: center;
+  margin-bottom: 50px;
 }
 
 .details-text{
@@ -51,8 +73,19 @@ html, body{
   text-align: left;
   padding-right: 50px;
   margin-left: 50px;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 0px;
 }
 
 .beer-titles{
   grid-area: title;
+  display: block;
+  text-indent: 45px;
+  padding-top: 15px
+}
+
+.beer-titles h1, .beer-titles h4{
+  display: flex;
+  block-size: none;
 }
