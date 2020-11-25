@@ -12,17 +12,20 @@ import Footer from "./components/Footer/Footer";
 import BeerSearchProvider from "./contexts/BeerSearch";
 import "./App.css";
 
-const App = (props) => {
-  return (
-    <BeerSearchProvider>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/beerlist" component={BeerList} />
-        <Route path="/about" component={About} />
-      </Switch>
-      <Footer />
-    </BeerSearchProvider>
-  );
-};
+class App extends React.Component {
+  render() {
+    return (
+      <BeerSearchProvider>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/beerlist" component={BeerList} />
+          <Route path="/about" component={About} />
+        </Switch>
+        <Footer />
+      </BeerSearchProvider>
+    );
+  }
+}
+
 export default App;

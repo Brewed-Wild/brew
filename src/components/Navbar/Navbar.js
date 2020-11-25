@@ -8,6 +8,8 @@ import "./Navbar.css";
 
 function Navbar(props) {
   const { searchFieldHandler } = React.useContext(BeerSearch);
+  const { searchFieldGo } = React.useContext(BeerSearch);
+
   return (
     <div className="pos-f-t">
       <div className="collapse" id="navbarToggleExternalContent">
@@ -86,11 +88,14 @@ function Navbar(props) {
           </Link>
           <span className="align-self-center">
             <input
+              onChange={searchFieldHandler}
               className="searchField"
               type="text"
-              onChange={searchFieldHandler}
               placeholder="Search beer by name"
             />
+            {/* <button onClick={searchFieldGo} className="searchFieldGo">
+              go
+            </button> */}
           </span>
         </div>
         {/* <Link className="navbar-brand" src="" exact to="/">

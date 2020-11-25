@@ -3,8 +3,8 @@
 /* eslint-disable react/state-in-constructor */
 import React from "react";
 import axios from "axios";
+// import Searchbar from "../Searchbar";
 import BeerCard from "./BeerCard";
-import { BeerSearch } from "../../contexts/BeerSearch";
 import "./beerList.css";
 
 export default class BeerFilters extends React.Component {
@@ -55,22 +55,7 @@ export default class BeerFilters extends React.Component {
     );
   };
 
-  getBeersByName = () => {
-    const { searchField } = this.context;
-    axios
-      .get(`https://api.punkapi.com/v2/beers?beer_name=${searchField}`)
-      .then((response) => this.setState({ beers: response.data }));
-  };
-
-  componentDidUpdate(prevContext) {
-    if (prevContext.searchField !== this.context.searchField) {
-      this.context.searchField === "" ? this.getBeers() : this.getBeersByName();
-    }
-  }
-
-  static contextType = BeerSearch;
   render() {
-    // console.log(searchField);
     return (
       <div>
         <h6>ABV</h6>
