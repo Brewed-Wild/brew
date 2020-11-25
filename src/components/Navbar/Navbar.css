@@ -1,14 +1,27 @@
+#navbarToggleExternalContent {
+  width: 100%;
+}
+
 .navbar {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(to top right, #cccccc 26%, #aaaaaa 59%);
+  box-shadow: 0px 1px 4px #51585e;
+}
+
+#logo-navbar {
+  height: 60px;
+  width: 160px;
+}
+
+#logo-navbar:hover {
+  cursor: grab;
 }
 
 #buttonGo {
   background-color: #444;
   padding: 6px 0 0 9px;
   width: 40px;
-  margin: 0 0 0 0;
-
+  margin: 0px;
   position: absolute;
   top: 0;
   right: 0;
@@ -23,23 +36,41 @@
   width: 270px;
 }
 
-#navbar #nav-div a:focus,
+#navbar #nav-div a {
+  line-height: 2;
+  margin-right: 10px;
+  border-radius: 12px;
+  transition: 0.15s;
+}
+
+#navbar #nav-div a:focus {
+  background-color: #eeeeee8c;
+  box-shadow: 0px 1px 4px #51585e;
+}
+
 #nav-div a:active {
-  background-color: #eee;
-  box-shadow: 0px 1px 4px 0px #51585e;
-  color: #000;
+  background-color: #eeeeee;
+  box-shadow: 0px 1px 4px #51585e;
 }
 
 #navbar a:hover span,
 #navbar a:focus span {
-  color: black;
+  color: #000;
 }
 
 #navbar #nav-div a:hover {
-  box-shadow: 0px 0px 1px 0px #51585e;
+  box-shadow: 1px 1px 1px 0px #5e5151;
 }
 
-#logo-navbar {
-  height: 60px;
-  width: 60px;
+@media screen and (max-width: 815px) {
+  .navbar {
+    padding: 0.5rem 0rem;
+  }
+
+  #navbar #nav-div a {
+    margin-right: 5px;
+  }
+  #searchfield {
+    width: 260px;
+  }
 }
