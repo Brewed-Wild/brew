@@ -4,9 +4,9 @@ import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./components/HomePage/HomePage";
 import About from "./components/AboutPage/AboutPage";
 import Footer from "./components/Footer/Footer";
-import "./App.css";
 import BeerFilters from "./components/RecipesPage/BeerList";
-// import BeerList from "./components/RecipesPage/BeerList";
+import BeerList from "./components/RecipesPage/BeerList";
+import "./App.css";
 // import FontExample from "./components/RecipesPage/FontExample";
 
 class App extends React.Component {
