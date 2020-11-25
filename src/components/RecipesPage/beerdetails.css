@@ -20,7 +20,8 @@ html, body{
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    ".             title       title        title      beer-values "
+    ".             nametitle   .             .         beer-values "
+    "product-image title       title        title      title "
     "product-image description description description description"
     "product-image description description description description"
     "product-image description description description description"
@@ -44,6 +45,7 @@ html, body{
 .beer-values span{
   font-size: 22px;
   font-weight: 600;
+  margin-right: auto;
   margin-right: 30px;
 }
 
@@ -70,11 +72,12 @@ html, body{
 .beer-titles{
   grid-area: title;
   display: block;
-  text-indent: 45px;
+  flex-wrap: wrap;
+  margin-left: 45px;
+  margin-right: 45px;
   padding-top: 15px
 }
 
-.beer-titles h1, .beer-titles h4{
-  /* display: flex; */
-  block-size: none;
+.beer-titles h1{
+  grid-area: nametitle;
 }
