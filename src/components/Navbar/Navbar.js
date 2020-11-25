@@ -3,7 +3,7 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { BeerSearch } from "../../contexts/BeerSearch";
-import Logo from "../../Assets/LOGO/Brewer_s Heaven icon.svg";
+import Logo from "../../Assets/LOGO/Brewers_Heaven_side_text.svg";
 import "./Navbar.css";
 
 function Navbar(props) {
@@ -108,9 +108,9 @@ function Navbar(props) {
               aria-label="Search"
             />
             <button
+              id="buttonGo"
               onClick={redirect}
               className="mt-50 h-100 text-light align-self-center d-flex"
-              id="buttonGo"
             >
               go
             </button>
