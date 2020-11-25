@@ -1,6 +1,6 @@
 .sliderContainer {
   -webkit-appearance: none;
-  width: 100%;
+  width: 30%;
   height: 15px;
   border-radius: 5px;
   background: #d3d3d3;
@@ -9,6 +9,7 @@
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
 }
+
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -27,3 +28,7 @@
   background: #4caf50;
   cursor: pointer;
 }
+
+
+
+
