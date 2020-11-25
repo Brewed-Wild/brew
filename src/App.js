@@ -7,9 +7,9 @@ import HomePage from "./components/HomePage/HomePage";
 import BeerList from "./components/RecipesPage/BeerList";
 import About from "./components/AboutPage/AboutPage";
 import Footer from "./components/Footer/Footer";
+import BeerSearchProvider from "./contexts/BeerSearch";
 // import BeerFilters from './components/RecipesPage/BeerList';
 // import FontExample from './components/RecipesPage/FontExample';
-import BeerSearchProvider from "./contexts/BeerSearch";
 import "./App.css";
 
 const App = (props) => {
@@ -20,6 +20,7 @@ const App = (props) => {
         <Route exact path="/" component={HomePage} />
         <Route path="/beerlist" component={BeerList} />
         <Route path="/about" component={About} />
+        <Route path="/beers/:id" component={BeerDetails} />
       </Switch>
       <Footer />
     </BeerSearchProvider>
