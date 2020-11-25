@@ -61,31 +61,41 @@ function Navbar(props) {
         height="100"
         id="navbar"
       >
-        <Link to="/" className="d-none d-md-flex ">
-          <img src={Logo} alt="" className="d-none d-md-flex" />
+        <Link to="/" className="d-none d-md-flex navbar-brand">
+          <img
+            src={Logo}
+            alt=""
+            className="d-none d-md-flex ml-4"
+            id="logo-navbar"
+          />
         </Link>
-        <div id="nav-div" className="d-none d-md-flex  h-100">
+        <div
+          id="nav-div"
+          className="d-none d-md-flex  h-100 align-items-stretch"
+        >
           <Link
-            className="dropdown-item mt-50 text-light h-100 pt-30 pb-0 align-self-center d-flex"
+            className="navlink dropdown-item mt-50 text-light h-100 pt-30 pb-0 align-self-center"
             aria-pressed="true"
             exact
             to="/"
           >
-            <span className="navlink-text align-self-center">Home</span>
+            <span>Home</span>
           </Link>
           {/* <div className="dropdown-divider" /> */}
           <Link
-            className="dropdown-item mt-50 text-light h-100 pb-0 align-self-center d-flex"
+            className="navlink dropdown-item mt-50 text-light h-100 pb-0 align-self-center"
             to="/beerlist"
           >
-            <span className="align-self-center">All Beers</span>
+            <span>Beer</span>
           </Link>
+          {/* <div className="dropdown-divider bg-secondary" /> */}
           <Link
-            className=" dropdown-item mt-50 text-light h-100 pb-0 align-self-center d-flex"
+            className="navlink dropdown-item mt-50 text-light h-100 pb-0 align-self-center"
             to="/about"
           >
-            <span className="align-self-center">About</span>
+            <span>About</span>
           </Link>
+          <div className="w-3 pl-20" />
           <span className="align-self-center">
             <input
               onChange={searchFieldHandler}
@@ -93,14 +103,8 @@ function Navbar(props) {
               type="text"
               placeholder="Search beer by name"
             />
-            {/* <button onClick={searchFieldGo} className="searchFieldGo">
-              go
-            </button> */}
           </span>
         </div>
-        {/* <Link className="navbar-brand" src="" exact to="/">
-            <img className="h-10 w-10" src={Logo} />
-          </Link> */}
         <button
           className="navbar-toggler ml-auto my-0.6 align-self-center d-md-none "
           type="button"
@@ -116,4 +120,5 @@ function Navbar(props) {
     </div>
   );
 }
+
 export default Navbar;

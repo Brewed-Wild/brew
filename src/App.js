@@ -20,7 +20,7 @@ const App = (props) => {
         <Route exact path="/" component={HomePage} />
         <Route path="/beerlist" component={BeerList} />
         <Route path="/about" component={About} />
-//        <Route path="/beers/:id" component={BeerDetails} />
+        {/* <Route path="/beers/:id" component={BeerDetails} /> */}
       </Switch>
       <Footer />
     </BeerSearchProvider>
