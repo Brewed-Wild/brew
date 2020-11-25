@@ -19,11 +19,11 @@ const BeerDetails = (props) => {
   
   return(
     <div className="beer-details mt-5">
-      <div className='beer-titles'>
+      <div className='beer-titles mt-5'>
       <h1>{currentBeer.name}</h1>
-      <h4>{currentBeer.tagline}</h4>
+      <h4 className="text-nowrap">{currentBeer.tagline}</h4>
       </div>
-      <div className="beer-values">
+      <div className="beer-values flex-column flex-xl-row mt-5">
         <span>abv:{currentBeer.abv}</span>
         <span>ibu:{currentBeer.ibu}</span>
         <span>ebc:{currentBeer.ebc}</span>
@@ -32,12 +32,12 @@ const BeerDetails = (props) => {
       <p className="details-text">
         <p>{currentBeer.description}</p>
         {/* <span>{currentBeer.ingredients.hops&& currentBeer.ingredients.hops.map((hop) => (<span>{hop.name}</span>))}</span> */}
-        <span> Goes well with 
+        <em> Goes well with 
           {currentBeer.food_pairing&& currentBeer.food_pairing.map((food) => (
             <span> {food.toLowerCase()}, </span>
           ))}
           and similar foods.
-        </span>
+        </em>
       </p>
 
     </div>
