@@ -32,7 +32,7 @@ const BeerDetails = (props) => {
       <p className="details-text">
         <p>{currentBeer.description}</p>
         {/* <span>{currentBeer.ingredients.hops&& currentBeer.ingredients.hops.map((hop) => (<span>{hop.name}</span>))}</span> */}
-        <em> Goes well with 
+        <br /><em> Goes well with 
           {currentBeer.food_pairing&& currentBeer.food_pairing.map((food) => (
             <span> {food.toLowerCase()}, </span>
           ))}
