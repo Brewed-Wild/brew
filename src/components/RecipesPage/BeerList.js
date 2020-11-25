@@ -1,11 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/state-in-constructor */
-import React from "react";
-import axios from "axios";
-import BeerCard from "./BeerCard";
-import { BeerSearch } from "../../contexts/BeerSearch";
-import "./beerList.css";
+import React from 'react';
+import axios from 'axios';
+import Searchbar from '../Searchbar';
+import BeerCard from './BeerCard';
+import './beerList.css';
+
+
 
 export default class BeerFilters extends React.Component {
     state = {
@@ -22,9 +24,9 @@ export default class BeerFilters extends React.Component {
       count: 0,
     }
 
-  componentDidMount() {
-    this.getBeers();
-  }
+    componentDidMount() {
+      this.getBeers();
+    }
 
     getBeers = () => {
       axios.get(`https://api.punkapi.com/v2/beers?abv_gt=${this.state.abvMin}&abv_lt${this.state.abvMax}`)
@@ -33,24 +35,22 @@ export default class BeerFilters extends React.Component {
         })
     }
 
-  handleChange = (event) => {
-    const { abvMin, abvMax, ibuMin, ibuMax, ebcMin, ebcMax } = this.state;
-    this.setState(
-      {
+    handleChange = (event) => {
+      const { abvMin, abvMax, ibuMin, ibuMax, ebcMin, ebcMax } = this.state;
+      this.setState({ 
         [event.target.name]: event.target.value,
-        abvMin: this.state.abv * 0.8,
+        abvMin: this.state.abv * .8,
         abvMax: this.state.abv * 1.2,
-        ibuMin: this.state.ibu * 0.8,
+        ibuMin: this.state.ibu * .8,
         ibuMax: this.state.ibu * 1.2,
-        ebcMin: this.state.ebc * 0.8,
-        ebcMax: this.state.ebc * 1.25,
+        ebcMin: this.state.ebc * .8,
+        ebcMax: this.state.ebc * 1.25 
       },
       () => {
         axios.get(`https://api.punkapi.com/v2/beers?abv_lt=${abvMax}&abv_gt=${abvMin}&ibu_lt=${ibuMax}&ibu_gt${ibuMin}&ebc_lt=${ebcMax}&ebc_gt${ebcMin}`)
           .then((response) => this.setState({ beers: response.data, count: response.data.length }));
       })
     }
-  }
 
     render() {
       return (
