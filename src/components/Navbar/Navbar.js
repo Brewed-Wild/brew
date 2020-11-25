@@ -71,28 +71,31 @@ function Navbar(props) {
             id="logo-navbar"
           />
         </Link>
-        <div id="nav-div" className="d-none d-md-flex  h-100">
+        <div
+          id="nav-div"
+          className="d-none d-md-flex  h-100 align-items-stretch"
+        >
           <Link
-            className="dropdown-item mt-50 text-light h-100 pt-30 pb-0 align-self-center d-flex"
+            className="navlink dropdown-item mt-50 text-light h-100 pt-30 pb-0 align-self-center"
             aria-pressed="true"
             exact
             to="/"
           >
-            <span className="navlink-text align-self-center">Home</span>
+            <span>Home</span>
           </Link>
           <Link
-            className="dropdown-item mt-50 text-light h-100 pb-0 align-self-center d-flex"
+            className="navlink dropdown-item mt-50 text-light h-100 pb-0 align-self-center"
             to="/beerlist"
           >
-            <span className="align-self-center">All Beers</span>
+            <span>Beer</span>
           </Link>
+          {/* <div className="dropdown-divider bg-secondary" /> */}
           <Link
-            className="dropdown-item mt-50 text-light h-100 pb-0 align-self-center d-flex"
+            className="navlink dropdown-item mt-50 text-light h-100 pb-0 align-self-center"
             to="/about"
           >
-            <span className="align-self-center">About</span>
+            <span>About</span>
           </Link>
-          {/* <span className="align-self-center pl-30"> */}
           <form className="form-inline pl-30" id="searchFieldContainer">
             <input
               id="searchField"
@@ -128,4 +131,5 @@ function Navbar(props) {
     </div>
   );
 }
+
 export default Navbar;

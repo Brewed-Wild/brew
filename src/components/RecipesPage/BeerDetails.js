@@ -19,9 +19,9 @@ const BeerDetails = (props) => {
   
   return(
     <div className="beer-details mt-5">
-      <div className='beer-titles mt-5'>
+      <div className='beer-titles '>
       <h1>{currentBeer.name}</h1>
-      <h4 className="text-nowrap">{currentBeer.tagline}</h4>
+      <h4 className="text-wrap">{currentBeer.tagline}</h4>
       </div>
       <div className="beer-values flex-column flex-xl-row mt-5">
         <span>abv:{currentBeer.abv}</span>
