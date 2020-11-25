@@ -2,6 +2,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import BeerSearchProvider from "./contexts/BeerSearch";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./components/HomePage/HomePage";
 import BeerList from "./components/RecipesPage/BeerList";
