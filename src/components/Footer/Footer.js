@@ -26,7 +26,7 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <footer className="d-grid bg-light h-100 ">
+      <footer className="d-grid bg-light h-100" id="footerContainer">
         <div className="row d-flex align-items-center justify-content-between flex-md-row">
           <div
             className="col-2.5  d-none d-md-flex align-items-center ml-5"
