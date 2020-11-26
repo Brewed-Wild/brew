@@ -1,21 +1,23 @@
 /* eslint-disable quotes */
 /* eslint-disable react/prefer-stateless-function */
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { BeerSearch } from "../../contexts/BeerSearch";
-import Logo from "../../Assets/LOGO/Brewer_s Heaven icon.svg";
+import Logo from "../../Assets/LOGO/Brewers_Heaven_side_text.svg";
 import "./Navbar.css";
 
 function Navbar(props) {
   const { searchFieldHandler } = React.useContext(BeerSearch);
   const { searchFieldGo } = React.useContext(BeerSearch);
 
+  const history = useHistory();
+  const redirect = () => {
+    history.push("/beerlist");
+  };
   return (
     <div className="pos-f-t">
       <div className="collapse" id="navbarToggleExternalContent">
         <div className="bg-secondary pt-2 d-block">
-          {/* <h4 className="text-light">Where to next...</h4> */}
-
           <div className="d-flex flex-column text-right">
             <Link
               className="dropdown-item text-light"
@@ -81,7 +83,6 @@ function Navbar(props) {
           >
             <span>Home</span>
           </Link>
-          {/* <div className="dropdown-divider" /> */}
           <Link
             className="navlink dropdown-item mt-50 text-light h-100 pb-0 align-self-center"
             to="/beerlist"
@@ -95,15 +96,25 @@ function Navbar(props) {
           >
             <span>About</span>
           </Link>
-          <div className="w-3 pl-20" />
-          <span className="align-self-center">
+          <form className="form-inline pl-30" id="searchFieldContainer">
             <input
+              id="searchField"
               onChange={searchFieldHandler}
-              className="searchField"
               type="text"
-              placeholder="Search beer by name"
+              className="form-control mr-sm-2 "
+              id="searchfield"
+              type="search"
+              placeholder="&#x1F50D; Search beer by name..."
+              aria-label="Search"
             />
-          </span>
+            <button
+              id="buttonGo"
+              onClick={redirect}
+              className="mt-50 h-100 text-light align-self-center d-flex"
+            >
+              go
+            </button>
+          </form>
         </div>
         <button
           className="navbar-toggler ml-auto my-0.6 align-self-center d-md-none "

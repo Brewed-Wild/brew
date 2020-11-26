@@ -70,12 +70,12 @@ Date.prototype.getWeek = function() {
           </p>
         </div>
         <Link to={`./beers/${beerOfTheWeek.id}`} >
-        <div className="card2">
-          <p className="cardTitle">Beer of the Week</p>
-          <b className="cardText">{beerOfTheWeek.name}</b><br />
-          <img className="img2 " src={beerOfTheWeek.image_url} alt="" /> <br />
+        <div className="card2 text-decoration-none">
+          <p className="cardTitle text-nowrap">Beer of the Week</p>
+          <img className="img2 ml-auto mr-auto" src={beerOfTheWeek.image_url} alt="" /> <br />
           <em className="cardText"> 
-            Goes well with 
+          <br />
+            This week's top beer -<b>{beerOfTheWeek.name}</b> - goes well with 
             {beerOfTheWeek.food_pairing&& beerOfTheWeek.food_pairing.map((food) => (
               <span> {food.toLowerCase()}, </span>
             ))} and similar foods.
@@ -85,7 +85,7 @@ Date.prototype.getWeek = function() {
         <div className="card3">
           <p className="cardTitle">Receipe of the Week</p>
           <img className="img3" src="https://images.unsplash.com/photo-1571947221289-ed32f8faad61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" />
-          <p className="cardText">This week we invite you to try this Malt recipe, very simple but very tastfull in the end! What are you wainting to start?</p>
+          <p className="cardText align-self-start">This week we invite you to try this Malt recipe, very simple but very tastfull in the end! What are you wainting to start?</p>
         </div>
       </div>
     </div>
