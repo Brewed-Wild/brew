@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './beerdetails.css';
+import {Link} from 'react-router-dom';
 
 const BeerDetails = (props) => {
   const params = props.match.params;
@@ -19,6 +20,9 @@ const BeerDetails = (props) => {
   
   return(
     <div className="beer-details mt-5 mb-5">
+      <Link to="../beerlist">
+        <p className="ml-4 h1"> &#x261C;</p>
+      </Link>
       <div className='beer-titles '>
       <h1>{currentBeer.name}</h1>
       <h4 className="text-wrap">{currentBeer.tagline}</h4>
