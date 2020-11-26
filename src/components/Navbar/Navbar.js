@@ -1,7 +1,7 @@
 /* eslint-disable quotes */
 /* eslint-disable react/prefer-stateless-function */
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BeerSearch } from "../../contexts/BeerSearch";
 import Logo from "../../Assets/LOGO/Brewers_Heaven_side_text.svg";
 import "./Navbar.css";
@@ -10,10 +10,6 @@ function Navbar(props) {
   const { searchFieldHandler } = React.useContext(BeerSearch);
   const { searchFieldGo } = React.useContext(BeerSearch);
 
-  const history = useHistory();
-  const redirect = () => {
-    history.push("/beerlist");
-  };
   return (
     <div className="pos-f-t">
       <div className="collapse" id="navbarToggleExternalContent">
@@ -107,13 +103,14 @@ function Navbar(props) {
               placeholder="&#x1F50D; Search beer by name..."
               aria-label="Search"
             />
-            <button
-              id="buttonGo"
-              onClick={redirect}
-              className="mt-50 h-100 text-light align-self-center d-flex"
-            >
-              go
-            </button>
+            <Link to="/beerlist">
+              <button
+                id="buttonGo"
+                className="mt-50 h-100 text-light align-self-center d-flex"
+              >
+                go
+              </button>
+            </Link>
           </form>
         </div>
         <button
