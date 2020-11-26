@@ -6,6 +6,7 @@ import axios from "axios";
 import BeerCard from "./BeerCard";
 import { BeerSearch } from "../../contexts/BeerSearch";
 import "./beerList.css";
+import {Link} from 'react-router-dom';
 
 export default class BeerFilters extends React.Component {
   state = {
@@ -145,7 +146,9 @@ export default class BeerFilters extends React.Component {
         <div className="cardsGrid">
           {this.state.beers.map((beer) => (
             <div className="Card">
-              <BeerCard {...beer} key={beer.id} />
+              <Link to={`./beers/${beer.id}`} >
+                <BeerCard {...beer} key={beer.id} />
+              </Link>
             </div>
           ))}
         </div>
