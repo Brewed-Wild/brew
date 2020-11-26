@@ -80,6 +80,11 @@ background-color: rgb(211, 211, 193);
 text-decoration: none;
 }
 
+a:hover{
+  text-decoration: none;
+
+}
+
 .cardTitle{
   height: 35px;
   font-size: 25px;
