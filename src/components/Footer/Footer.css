@@ -10,6 +10,9 @@ form {
   margin: 7rem 0 0 0;
 }
 
+#footerContainer {
+  margin: 7rem 0 0 0;
+}
 #userMessage {
   height: 100px;
 }
@@ -71,4 +74,9 @@ a {
 
 h6 {
   color: #aaa;
+}
+
+.footerSignature i {
+  display: flex;
+  justify-content: center;
 }

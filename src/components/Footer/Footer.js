@@ -100,8 +100,8 @@ class Footer extends React.Component {
             </p>
           </div>
         </div>
-        <div className="">
-          <hr className="mt-0" />
+        <div className="footerSignature">
+          <hr />
           <i>Brewer's Heaven @ 2020</i>
         </div>
       </footer>

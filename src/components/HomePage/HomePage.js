@@ -1,9 +1,10 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
-import glasses3 from "../../Assets/glasses3.png";
-import glasses1 from "../../Assets/glasses1.png";
+import { Link } from "react-router-dom";
+import beer2 from "../../Assets/beer_2.jpg";
+import beer3 from "../../Assets/beer_3.jpg";
+import beer4 from "../../Assets/beer_4.jpg";
 import "./HomePage.css";
 
 const HomePage = () => {
@@ -46,6 +47,7 @@ const HomePage = () => {
         className="carousel slide carousel-fade"
         data-ride="carousel"
         data-interval="5000"
+        // id="carousel"
       >
         <ol className="carousel-indicators">
           <li
@@ -58,17 +60,13 @@ const HomePage = () => {
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="d-block w-100" src={glasses3} alt="First slide" />
+            <img className="d-block w-100" src={beer2} alt="First slide" />
           </div>
           <div className="carousel-item">
-            <img
-              className="d-block w-100"
-              src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/beer-tap-panoramic-david-lee-thompson.jpg"
-              alt="Second slide"
-            />
+            <img className="d-block w-100" src={beer3} alt="Second slide" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={glasses1} alt="Third slide" />
+            <img className="d-block w-100" src={beer4} alt="Third slide" />
           </div>
         </div>
         <a
@@ -90,7 +88,7 @@ const HomePage = () => {
           <span className="sr-only">Next</span>
         </a>
       </div>
-      <div className="totalImage">
+      <div className="totalImage" id="cardsContainer">
         <div className="card1">
           <p className="cardTitle">Workshop</p>
           <img
@@ -120,7 +118,7 @@ const HomePage = () => {
               {beerOfTheWeek.food_pairing &&
                 beerOfTheWeek.food_pairing.map((food) => (
                   <span> {food.toLowerCase()}, </span>
-                ))}{" "}
+                ))}
               and similar foods.
             </em>
           </div>

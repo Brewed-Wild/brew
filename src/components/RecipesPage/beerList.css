@@ -323,7 +323,6 @@ body {
   .cardContainer {
     height: 360px;
     width: 600px;
-    borderalign: center;
     margin: 0.5rem auto;
   }
 }
