@@ -30,7 +30,7 @@ function About() {
             src="https://images.unsplash.com/photo-1567579518027-7a113279f8ce?ixlib=
           rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80"
             className="img-fluid"
-            alt="Responsive image"
+            alt=""
           />
         </div>
 
@@ -52,7 +52,7 @@ function About() {
             src="https://images.unsplash.com/photo-1535958636474-b021ee887b13?ixlib=rb-1.2.1&ixid=
             eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
             className="img-fluid"
-            alt="Responsive image"
+            alt=""
           />
         </div>
 
@@ -71,7 +71,7 @@ function About() {
             src="https://images.unsplash.com/photo-1539097463168-fdc97aa4d984?ixlib=rb-1.2.
             1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1825&q=80"
             className="img-fluid"
-            alt="Responsive image"
+            alt=""
           />
         </div>
         <div className="buttonContainer">
