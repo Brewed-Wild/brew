@@ -9,11 +9,16 @@ function About() {
   };
 
   return (
-    <div className="container-sm">
+    <div className="container-sm" id="cardsContainer">
       <div className="col-sm-10 mx-auto">
-        <h2 className=" font-weight-bold text-center mt-5 "> About Us </h2>
+        <h2 id="titleAboutUs" className=" font-weight-bold text-center">
+          About Us
+        </h2>
         <br />
-        <div className="ourStoryContainer col-sm-12 text-justify p-5 ml-1 my-5">
+        <div
+          id="cardOne"
+          className="ourStoryContainer col-sm-12 text-justify p-5 my-5"
+        >
           <h5 className=" font-weight-bold my-2 "> Our Story </h5>
           <p className="mb-4">
             Brewer's Heaven was born in 2015 with a simple idea in mind:
@@ -29,7 +34,10 @@ function About() {
           />
         </div>
 
-        <div className="ourApproachContainer col-sm-12 text-justify p-5 ml-3 my-5">
+        <div
+          id="cardTwo"
+          className="ourApproachContainer col-sm-12 text-justify p-5 my-5"
+        >
           <h5 className=" font-weight-bold my-2"> Our Approach To Beer </h5>
           <p className=" mb-4 ">
             Our philosophy is to inform about the vast universe of craft beers
@@ -48,7 +56,10 @@ function About() {
           />
         </div>
 
-        <div className="endResultContainer col-sm-12 text-justify p-5 ml-5 my-5">
+        <div
+          id="cardThree"
+          className="endResultContainer col-sm-12 text-justify p-5 my-5"
+        >
           <h5 className=" font-weight-bold my-2"> The End Result </h5>
           <p className="mb-4">
             Whether you fancy a fruity, hoppy pale ale on a hot sunny day or an
@@ -63,10 +74,15 @@ function About() {
             alt=""
           />
         </div>
-
-        <button className="btn-lg btn-info my-5" onClick={redirect}>
-          EXPLORE OUR RECIPES
-        </button>
+        <div className="buttonContainer">
+          <button
+            id="buttonExploreOurBeers"
+            className="btn-lg btn-info mx-auto"
+            onClick={redirect}
+          >
+            EXPLORE OUR BEERS
+          </button>
+        </div>
       </div>
     </div>
   );
