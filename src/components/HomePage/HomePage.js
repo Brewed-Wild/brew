@@ -73,7 +73,7 @@ Date.prototype.getWeek = function() {
         <div className="card2">
           <p className="cardTitle">Beer of the Week</p>
           <b className="cardText">{beerOfTheWeek.name}</b><br />
-          <img className="img2" src={beerOfTheWeek.image_url} alt="" /> <br />
+          <img className="img2 " src={beerOfTheWeek.image_url} alt="" /> <br />
           <em className="cardText"> 
             Goes well with 
             {beerOfTheWeek.food_pairing&& beerOfTheWeek.food_pairing.map((food) => (
