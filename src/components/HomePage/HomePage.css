@@ -88,8 +88,6 @@ text-decoration: none;
   margin: 20px 0 20px 0;
   font-family: "Kanit", sans-serif;
   text-align: center;
-  text-decoration: none;
-  color: #000;
   grid-area: card-title;
 
 } 
@@ -98,20 +96,24 @@ text-decoration: none;
   font-family: "Poppins", sans-serif;
   margin: 10px;
   text-align: justify;
-  text-decoration: none;
-  color: #000;
   grid-area: card-text;
 } 
 
 p{
   margin-top: auto;
   margin-bottom: auto;
-  text-decoration: none;
-  color: #000;
-  
 }
 
 .carousel-item{
   max-height: 500px;
 }
 
+a{
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #000;
+  text-decoration: none;
+}
