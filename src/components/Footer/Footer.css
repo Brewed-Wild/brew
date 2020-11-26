@@ -1,68 +1,79 @@
-footer{
+footer {
   padding: 15px;
-  height: 200px
+  height: 200px;
 }
 
-form{
+form {
   margin: 15px;
 }
 
-#userMessage{
+#footerContainer {
+  margin: 7rem 0 0 0;
+}
+#userMessage {
   height: 100px;
 }
 
-#logo-container{
+#logo-container {
   padding: 0;
   /* margin-left: -10px; */
 }
 
-.invisible{
-  display:none;
+.invisible {
+  display: none;
 }
-#social-icons{
-  height: 100%
+#social-icons {
+  height: 100%;
 }
 
-.social-icon{
-  opacity: .7;
+.social-icon {
+  opacity: 0.7;
   height: 30px;
 }
 
 .social-icon:hover {
   height: 37px;
-  opacity: .9;
-  transition: .2s
+  opacity: 0.9;
+  transition: 0.2s;
 }
 
-.logo-footer{
+.logo-footer {
   opacity: 0.7;
   height: 90px;
 }
 
-.wild-logo, .fixee-logo{
-  opacity: .7;
+.wild-logo,
+.fixee-logo {
+  opacity: 0.7;
   height: 40px;
   margin: 1em;
-
 }
 
-.sali-logo, .easytech-logo{
-  opacity: .6;
+.sali-logo,
+.easytech-logo {
+  opacity: 0.6;
   margin: 1em;
-  height: 50px
+  height: 50px;
 }
 
-.sali-logo:hover, .wild-logo:hover, .logo-footer:hover, .easytech-logo:hover, .fixee-logo{
+.sali-logo:hover,
+.wild-logo:hover,
+.logo-footer:hover,
+.easytech-logo:hover,
+.fixee-logo {
   transition: 1s;
-  opacity: .9;
+  opacity: 0.9;
 }
-
 
 a {
   text-decoration: none;
 }
 
-h6{
+h6 {
   color: #aaa;
 }
 
+.footerSignature i {
+  display: flex;
+  justify-content: center;
+}
