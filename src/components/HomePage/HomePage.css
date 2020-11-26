@@ -1,6 +1,18 @@
+body {
+  background-image: url("../../Assets/3459069-01.svg");
+}
 
 
+button{
+  background:  rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border:none
+}
 
+button:hover  {
+  color:black;
+  background:  rgba(255, 255, 255, 0.3);
+}
 
 .text{
   display: flex;
@@ -15,18 +27,6 @@ padding-top: 7%;
 font-size: 300%;
 }
 
-button{
-  background:  rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  border:none
-  }
-
-  button:hover  {
-    color:black;
-    background:  rgba(255, 255, 255, 0.3);
-    
-}
-
 .totalImage{
   
   display: flex;
@@ -39,15 +39,20 @@ button{
 
 .img1, .img2, .img3 {
   /* opacity: 0.5; */
-  width: 340px;
+  max-width: 340px;
   border-radius: 2px;
-  
+  max-height: 226px;
   box-shadow: 0px 0px 5px 0px #666;
+  grid-area: card-image;
+}
+
+.img2{
+  box-shadow: none;
 }
 
 .card1, .card2, .card3{
-  margin: 0 2% 2% 2%;
-  border-style: solid;
+  margin: auto;
+  border: solid black;
   width: 350px;
   height: 500px;
   /* display: inline; */
@@ -56,37 +61,59 @@ button{
   box-shadow: 1px 1px 11px 1px #bbb;
   line-height: 2em;
   border-width: 1px;
+  text-decoration: none;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto, minmax(80, 225));
+  grid-template-areas:
+    "    .      card-title      .    "
+    "    .      card-image      .    "
+    "    .      card-image      .    "
+    "card-text  card-text   card-text"
+    "card-text  card-text   card-text"
+    "card-text  card-text   card-text"
 }
-.card1:hover{
+
+.card1:hover, .card2:hover, .card3:hover{
 background-color: rgb(211, 211, 193);
+text-decoration: none;
 }
-.card2:hover{
-  background-color: rgb(211, 211, 193);
-  }
-  .card3:hover{
-    background-color: rgb(211, 211, 193);
-    }
+
 .cardTitle{
-  font-size: 160%;
+  height: 35px;
+  font-size: 25px;
+  box-sizing: border-box;
   font-weight: bold;
-  margin: 6% 0 6% 0;
+  margin: 20px 0 20px 0;
   font-family: "Kanit", sans-serif;
+  text-align: center;
+  grid-area: card-title;
+
 } 
 .cardText{
-  margin: 2% 2% 0 2%;
+  margin: 2% 2% 2% 2%;
   font-family: "Poppins", sans-serif;
+  margin: 10px;
+  text-align: justify;
+  grid-area: card-text;
 } 
+
 p{
   margin-top: auto;
   margin-bottom: auto;
-  
 }
 
-body {
-  background-image: url("../../Assets/3459069-01.svg");
-
-}
 .carousel-item{
   max-height: 500px;
 }
 
+a{
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #000;
+  text-decoration: none;
+}
