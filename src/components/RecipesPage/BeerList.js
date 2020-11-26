@@ -72,7 +72,7 @@ export default class BeerFilters extends React.Component {
       this.context.searchField === "" ? this.getBeers() : this.getBeersByName();
     }
   }
-
+  static contextType = BeerSearch;
   render() {
     return (
       <div>
