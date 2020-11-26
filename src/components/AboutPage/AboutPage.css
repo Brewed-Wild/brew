@@ -1,43 +1,97 @@
 body {
-    background-image: url("/Users/leandrobaseggio/WCS/brew/src/Assets/3459069-01.svg");
-    font-family: 'Cabin', sans-serif;
+  background-image: url("../../Assets/3459069-01.svg");
+  font-family: "Cabin", sans-serif;
 }
 
-
-h2 {
-    font-family: 'Rubik', sans-serif;
+.container-sm h2 {
+  font-family: "Rubik", sans-serif;
 }
 
-h5 {
-    font-family: 'Kanit', sans-serif;
+.container-sm h5 {
+  font-family: "Kanit", sans-serif;
 }
 
-p {
-    font-family: 'Poppins', sans-serif;
+.container-sm p {
+  font-family: "Poppins", sans-serif;
 }
-
+#titleAboutUs {
+  margin: 5rem 0 0 0;
+}
 .ourStoryContainer {
-    background-color: #e4fde125;
-    border-radius: 1em;
-    box-shadow: 1px 1px 11px 1px #bbb;
-    line-height: 2em;
+  background-color: #e4fde125;
+  border-radius: 1em;
+  box-shadow: 1px 1px 11px 1px #bbb;
+  line-height: 2em;
 }
-
 
 .ourApproachContainer {
-    background-color: #8ACBB825;
-    border-radius: 1em;
-    box-shadow: 1px 1px 11px 1px #bbb;
-    line-height: 2em;
+  background-color: #8acbb825;
+  border-radius: 1em;
+  box-shadow: 1px 1px 11px 1px #bbb;
+  line-height: 2em;
 }
 
 .endResultContainer {
-    background-color: #64838125;
-    border-radius: 1em;
-    box-shadow: 1px 1px 11px 1px #bbb;
-    line-height: 2em;
+  background-color: #64838125;
+  border-radius: 1em;
+  box-shadow: 1px 1px 11px 1px #bbb;
+  line-height: 2em;
 }
 
 img.img-fluid {
-    box-shadow: 1px 1px 11px 1px #666;
+  box-shadow: 1px 1px 11px 1px #666;
+}
+
+#cardsContainer {
+  display: flex;
+}
+
+#cardOne {
+  margin-left: -12rem;
+}
+
+#cardTwo {
+  margin-left: 0;
+}
+
+#cardThree {
+  margin-left: 12rem;
+}
+
+.buttonContainer {
+  display: flex;
+}
+
+#buttonExploreOurBeers {
+  padding: 15px;
+  justify-self: center;
+  margin: 5% 0 13% 0;
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 1380px) {
+  #cardOne {
+    margin-left: -6rem;
+  }
+
+  #cardTwo {
+    margin-left: 0;
+  }
+
+  #cardThree {
+    margin-left: 6rem;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  #cardOne {
+    margin-left: 0;
+  }
+
+  #cardTwo {
+    margin-left: 0;
+  }
+
+  #cardThree {
+    margin-left: 0;
+  }
 }
