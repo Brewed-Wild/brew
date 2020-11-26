@@ -5,6 +5,7 @@ import React from "react";
 import axios from "axios";
 import BeerCard from "./BeerCard";
 import { BeerSearch } from "../../contexts/BeerSearch";
+import { Link } from "react-router-dom";
 import "./beerList.css";
 
 export default class BeerFilters extends React.Component {
@@ -19,7 +20,6 @@ export default class BeerFilters extends React.Component {
     ibuMax: 100,
     ebcMin: 0,
     ebcMax: 200,
-    count: 0,
   };
 
   componentDidMount() {
@@ -53,9 +53,7 @@ export default class BeerFilters extends React.Component {
           .get(
             `https://api.punkapi.com/v2/beers?abv_lt=${abvMax}&abv_gt=${abvMin}&ibu_lt=${ibuMax}&ibu_gt${ibuMin}&ebc_lt=${ebcMax}&ebc_gt${ebcMin}`
           )
-          .then((response) =>
-            this.setState({ beers: response.data, count: response.data.length })
-          );
+          .then((response) => this.setState({ beers: response.data }));
       }
     );
   };
@@ -72,6 +70,7 @@ export default class BeerFilters extends React.Component {
       this.context.searchField === "" ? this.getBeers() : this.getBeersByName();
     }
   }
+
   static contextType = BeerSearch;
   render() {
     return (
@@ -139,13 +138,16 @@ export default class BeerFilters extends React.Component {
           </div>
         </div>
         <h1 className="beerNumber">
-          There are <em className="exactNumber">{this.state.count}</em> beers
-          matching your preferences
+          There are
+          <em className="exactNumber">{this.state.beers.length}</em>
+          beers matching your preferences
         </h1>
         <div className="cardsGrid">
           {this.state.beers.map((beer) => (
             <div className="Card">
-              <BeerCard {...beer} key={beer.id} />
+              <Link to={`./beers/${beer.id}`}>
+                <BeerCard {...beer} key={beer.id} />
+              </Link>
             </div>
           ))}
         </div>

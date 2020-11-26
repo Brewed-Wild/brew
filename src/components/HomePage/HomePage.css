@@ -3,17 +3,17 @@ body {
 }
 
 button {
-  background: rgba(255, 255, 255, 0.2);
+  background: #ffffff33;
   border-radius: 10px;
   border: none;
 }
 
 button:hover {
   color: black;
-  background: rgba(255, 255, 255, 0.3);
+  background: #ffffff4d;
 }
 
-#carousel {
+#carouselExampleIndicators {
   margin: 0 0 85px 0;
 }
 

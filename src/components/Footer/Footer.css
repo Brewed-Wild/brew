@@ -6,6 +6,9 @@ footer {
 form {
   margin: 15px;
 }
+#footerContainer {
+  margin: 7rem 0 0 0;
+}
 
 #footerContainer {
   margin: 7rem 0 0 0;

@@ -2,7 +2,6 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Footer.css";
 import Logo from "../../Assets/LOGO/Brewer_s Heaven icon.svg";
 import Twitter from "../../Assets/twitter.svg";
 import Facebook from "../../Assets/facebook.svg";
@@ -10,6 +9,7 @@ import Instagram from "../../Assets/instagram.svg";
 import SaliSali from "../../Assets/SaliSali.png";
 import Easytech from "../../Assets/EasyTech_logo.svg";
 import Fixee from "../../Assets/Fixee.svg";
+import "./Footer.css";
 
 class Footer extends React.Component {
   state = {

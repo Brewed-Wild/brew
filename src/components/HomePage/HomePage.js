@@ -1,11 +1,11 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from "react";
-import "./HomePage.css";
+import axios from "axios";
+import { Link } from "react-router-dom";
 import beer2 from "../../Assets/beer_2.jpg";
 import beer3 from "../../Assets/beer_3.jpg";
 import beer4 from "../../Assets/beer_4.jpg";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import "./HomePage.css";
 
 const HomePage = () => {
   const [beerOfTheWeek, setBeerOfTheWeek] = React.useState({});
@@ -47,7 +47,7 @@ const HomePage = () => {
         className="carousel slide carousel-fade"
         data-ride="carousel"
         data-interval="5000"
-        id="carousel"
+        // id="carousel"
       >
         <ol className="carousel-indicators">
           <li
@@ -118,7 +118,7 @@ const HomePage = () => {
               {beerOfTheWeek.food_pairing &&
                 beerOfTheWeek.food_pairing.map((food) => (
                   <span> {food.toLowerCase()}, </span>
-                ))}{" "}
+                ))}
               and similar foods.
             </em>
           </div>
