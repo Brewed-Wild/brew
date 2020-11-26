@@ -10,10 +10,6 @@ function Navbar(props) {
   const { searchFieldHandler } = React.useContext(BeerSearch);
   const { searchFieldGo } = React.useContext(BeerSearch);
 
-  const history = useHistory();
-  const redirect = () => {
-    history.push("/beerlist");
-  };
   return (
     <div className="pos-f-t">
       <div className="collapse" id="navbarToggleExternalContent">
@@ -31,7 +27,6 @@ function Navbar(props) {
             >
               Home
             </Link>
-            {/* <div className="dropdown-divider" /> */}
             <Link
               className="dropdown-item text-light"
               data-toggle="collapse"
@@ -43,7 +38,6 @@ function Navbar(props) {
             >
               Beer
             </Link>
-            {/* <div className="dropdown-divider bg-secondary" /> */}
             <Link
               className="dropdown-item text-light"
               data-toggle="collapse"
@@ -107,13 +101,14 @@ function Navbar(props) {
               placeholder="&#x1F50D; Search beer by name..."
               aria-label="Search"
             />
-            <button
-              id="buttonGo"
-              onClick={redirect}
-              className="mt-50 h-100 text-light align-self-center d-flex"
-            >
-              go
-            </button>
+            <Link to="/beerlist">
+              <button
+                id="buttonGo"
+                className="mt-50 h-100 text-light align-self-center d-flex"
+              >
+                go
+              </button>
+            </Link>
           </form>
         </div>
         <button
