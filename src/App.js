@@ -1,27 +1,28 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
-import HomePage from './components/HomePage/HomePage';
-import BeerList from './components/RecipesPage/BeerList';
-import About from './components/AboutPage/AboutPage';
-import Footer from './components/Footer/Footer';
-import './App.css';
-import BeerFilters from './components/RecipesPage/BeerList';
-import FontExample from "./components/RecipesPage/FontExample";
+/* eslint-disable quotes */
+/* eslint-disable react/prefer-stateless-function */
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import BeerSearchProvider from "./contexts/BeerSearch";
+import Navbar from "./components/Navbar/Navbar";
+import HomePage from "./components/HomePage/HomePage";
+import BeerList from "./components/RecipesPage/BeerList";
+import About from "./components/AboutPage/AboutPage";
+import Footer from "./components/Footer/Footer";
+import BeerDetails from './components/RecipesPage/BeerDetails';
+import "./App.css";
 
-function App() {
+const App = (props) => {
   return (
-    <div className="App">
-      {/* <FontExample /> */}
+    <BeerSearchProvider>
       <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/beerfilters" component={BeerFilters} />
+        <Route path="/beerlist" component={BeerList} />
         <Route path="/about" component={About} />
+        <Route path="/beers/:id" component={BeerDetails} />
       </Switch>
       <Footer />
-    </div>
+    </BeerSearchProvider>
   );
-}
-
+};
 export default App;
