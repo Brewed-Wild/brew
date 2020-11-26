@@ -1,4 +1,3 @@
-
 body {
   margin-top: 2rem;
   background-image: url("../../Assets/3459069-01.svg");
@@ -7,239 +6,349 @@ body {
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 20px;
   margin: 1rem 6rem;
 }
 
 .slidecontainer {
   width: 100%; /* Width of the outside container */
+  display: flex;
+  margin: 1rem 0 2rem 0;
 }
 
-/* The slider itself */
 .slider {
-  -webkit-appearance: none;  /* Override default CSS styles */
+  -webkit-appearance: none; /* Override default CSS styles */
   appearance: none;
   border-radius: 50%;
-  width: 50%; /* Full-width */
+  width: 100%; /* Full-width */
   height: 10px; /* Specified height */
   margin: 20px;
   background: #cfcec9; /* Grey background */
   outline: none; /* Remove outline */
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .5s; /* 0.2 seconds transition on hover */
-  transition: opacity .5s;
+  -webkit-transition: 0.5s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.5s;
 }
 
-/* Mouse-over effects */
 .slider:hover {
   opacity: 1; /* Fully shown on mouse-over */
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   border-radius: 50%;
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #df7c2c; /* Green background */
+  background: transparent; /* Green background */
   cursor: pointer; /* Cursor on hover */
+  border: solid;
 }
 
 .slider::-moz-range-thumb {
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #20333B; /* Green background */
+  background: #20333b; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
-/* #avaiableFonts {
-  font-family: "Blinker", sans-serif;
-  font-family: "Do Hyeon", sans-serif;
-  font-family: "Kanit", sans-serif;
-  font-family: "Nunito Sans", sans-serif;
-  font-family: "Poppins", sans-serif;
-} */
-body {
-  margin-top: 2rem;
-  background-image: url("../../Assets/3459069-01.svg");
-}
-
-.cardsGrid {
+.abvContainer,
+.ibuContainer,
+.ebcContainer {
+  width: 33%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
-  grid-gap: 30px;
-  margin: 1rem 6rem;
+  justify-items: center;
 }
 
-.slidecontainer {
-  width: 100%; /* Width of the outside container */
+#myRange1 {
+  background: #ffffbe;
+  background: -moz-linear-gradient(
+    90deg,
+    #ffffbe 0%,
+    #eaf766 50%,
+    #fff526 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    #ffffbe 0%,
+    #eaf766 50%,
+    #fff526 100%
+  );
+  background: linear-gradient(90deg, #ffffbe 0%, #eaf766 50%, #fff526 100%);
 }
 
-/* The slider itself */
-.slider {
-  -webkit-appearance: none;  /* Override default CSS styles */
-  appearance: none;
-  border-radius: 50%;
-  width: 50%; /* Full-width */
-  height: 10px; /* Specified height */
-  margin: 20px;
-  background: #cfcec9; /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .5s; /* 0.2 seconds transition on hover */
-  transition: opacity .5s;
+#myRange2 {
+  background: #d7fac2;
+  background: -moz-linear-gradient(
+    90deg,
+    #d7fac2 0%,
+    #9ae378 50%,
+    #5ac73e 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    #d7fac2 0%,
+    #9ae378 50%,
+    #5ac73e 100%
+  );
+  background: linear-gradient(90deg, #d7fac2 0%, #9ae378 50%, #5ac73e 100%);
 }
 
-/* Mouse-over effects */
-.slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
+#myRange3 {
+  background: #d9c4ad;
+  background: -moz-linear-gradient(
+    90deg,
+    #d9c4ad 0%,
+    #962d00 50%,
+    #360800 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    #d9c4ad 0%,
+    #962d00 50%,
+    #360800 100%
+  );
+  background: linear-gradient(90deg, #d9c4ad 0%, #962d00 50%, #360800 100%);
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  border-radius: 50%;
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #df7c2c; /* Green background */
-  cursor: pointer; /* Cursor on hover */
+.abvSpan,
+.ibuSpan,
+.ebcSpan {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  color: #8e8e8e;
+  letter-spacing: 0.1em;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
 }
 
-.slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #20333B; /* Green background */
-  cursor: pointer; /* Cursor on hover */
-}
-
-/* #avaiableFonts {
-  font-family: "Blinker", sans-serif;
-  font-family: "Do Hyeon", sans-serif;
+.beerNumber {
   font-family: "Kanit", sans-serif;
-  font-family: "Nunito Sans", sans-serif;
-  font-family: "Poppins", sans-serif;
-} */
-body {
-  margin-top: 2rem;
-  background-image: url("../../Assets/3459069-01.svg");
+  font-weight: 500;
+  padding-top: 0.4rem;
+  margin: 1rem 0 4rem 0;
+  font-size: 28px;
+  text-align: center;
+  color: #648381;
+  text-shadow: 1px 1px 2px #ccc;
 }
 
-.cardsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
-  grid-gap: 30px;
-  margin: 1rem 6rem;
-}
-
-.slidecontainer {
-  width: 100%; /* Width of the outside container */
-}
-
-/* The slider itself */
-.slider {
-  -webkit-appearance: none;  /* Override default CSS styles */
-  appearance: none;
-  border-radius: 50%;
-  width: 50%; /* Full-width */
-  height: 10px; /* Specified height */
-  margin: 20px;
-  background: #cfcec9; /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .5s; /* 0.2 seconds transition on hover */
-  transition: opacity .5s;
-}
-
-/* Mouse-over effects */
-.slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
-}
-
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  border-radius: 50%;
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #df7c2c; /* Green background */
-  cursor: pointer; /* Cursor on hover */
-}
-
-.slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #20333B; /* Green background */
-  cursor: pointer; /* Cursor on hover */
-}
-
-/* #avaiableFonts {
-  font-family: "Blinker", sans-serif;
-  font-family: "Do Hyeon", sans-serif;
+.exactNumber {
   font-family: "Kanit", sans-serif;
-  font-family: "Nunito Sans", sans-serif;
-  font-family: "Poppins", sans-serif;
-} */
-body {
-  margin-top: 2rem;
-  background-image: url("../../Assets/3459069-01.svg");
+  font-weight: 500;
+  padding-top: 0.4rem;
+  margin: 0.5rem 0.5rem;
+  font-size: 28px;
+  color: #9b3333;
+  text-shadow: 1px 1px 2px #ccc;
 }
 
-.cardsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
-  grid-gap: 30px;
-  margin: 1rem 6rem;
+.abvTitle,
+.ibuTitle,
+.ebcTitle {
+  display: flex;
+  align-items: center;
+  color: #648381;
+  letter-spacing: 0.1em;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
 }
 
-.slidecontainer {
-  width: 100%; /* Width of the outside container */
+.abvNumber,
+.ibuNumber,
+.ebcNumber {
+  display: flex;
+  align-items: center;
+  color: #9b3333;
+  letter-spacing: 0.1em;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
 }
 
-/* The slider itself */
-.slider {
-  -webkit-appearance: none;  /* Override default CSS styles */
-  appearance: none;
-  border-radius: 50%;
-  width: 50%; /* Full-width */
-  height: 10px; /* Specified height */
-  margin: 20px;
-  background: #cfcec9; /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .5s; /* 0.2 seconds transition on hover */
-  transition: opacity .5s;
+/* //////////////////////////////////////     MEDIA QUERIES   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\    */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .slidecontainer {
+    width: 100%; /* Width of the outside container */
+    display: block;
+    margin: 2rem 0;
+  }
+  .abvContainer,
+  .ibuContainer,
+  .ebcContainer {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+  }
+  .cardContainer {
+    height: 360px;
+    width: 95%;
+    margin: 0.5rem auto;
+  }
+  .product-img {
+    width: 25%;
+    margin: 10px;
+  }
+  .product-img img {
+    height: 55%;
+  }
+
+  .product-info {
+    height: 360px;
+    width: 75%;
+    border-radius: 1rem;
+    background-color: #fafafa82;
+    border: solid 0.5px #d2d2d238;
+  }
+
+  .product-text {
+    height: 300px;
+    width: 100%;
+    /* padding: 1rem; */
+  }
+  .beerIndicators {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: "Do Hyeon", sans-serif;
+    color: #648381;
+    margin-top: 1.5rem;
+    letter-spacing: 0.05em;
+  }
+  .cardsGrid {
+    grid-template-columns: none;
+    grid-gap: 10px;
+    margin: 1rem 0.5rem;
+  }
 }
 
-/* Mouse-over effects */
-.slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .slidecontainer {
+    width: 100%; /* Width of the outside container */
+    display: block;
+    margin: 3rem 0;
+  }
+  .abvContainer,
+  .ibuContainer,
+  .ebcContainer {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+  }
+  .cardContainer {
+    height: 360px;
+    width: 600px;
+    margin: 0.5rem auto;
+  }
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
+    grid-gap: 10px;
+    margin: 1rem 0.5rem;
+  }
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  border-radius: 50%;
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #df7c2c; /* Green background */
-  cursor: pointer; /* Cursor on hover */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .slidecontainer {
+    width: 100%; /* Width of the outside container */
+    display: block;
+    margin: 3rem 0;
+  }
+  .abvContainer,
+  .ibuContainer,
+  .ebcContainer {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+  }
+  .cardContainer {
+    height: 360px;
+    width: 600px;
+    border-radius: 1rem;
+    border: solid 0.5px #d2d2d238;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0.5rem auto;
+  }
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
+    grid-gap: 10px;
+    margin: 1rem 4rem;
+  }
 }
 
-.slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #20333B; /* Green background */
-  cursor: pointer; /* Cursor on hover */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .abvContainer,
+  .ibuContainer,
+  .ebcContainer {
+    width: 33%;
+    display: grid;
+    justify-items: center;
+  }
+  .slidecontainer {
+    width: 100%; /* Width of the outside container */
+    display: flex;
+    margin: 3rem 0;
+  }
+  .cardContainer {
+    height: 360px;
+    width: 600px;
+    margin: 0.5rem auto;
+  }
 }
 
-/* #avaiableFonts {
-  font-family: "Blinker", sans-serif;
-  font-family: "Do Hyeon", sans-serif;
-  font-family: "Kanit", sans-serif;
-  font-family: "Nunito Sans", sans-serif;
-  font-family: "Poppins", sans-serif;
-} */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .abvContainer,
+  .ibuContainer,
+  .ebcContainer {
+    width: 33%;
+    display: grid;
+    justify-items: center;
+  }
+  .slidecontainer {
+    width: 100%; /* Width of the outside container */
+    margin: 3rem 0;
+  }
+  .cardContainer {
+    height: 360px;
+    width: 600px;
+    margin: 0.5rem auto;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .cardsGrid {
+    grid-gap: 20px;
+    margin: 1rem 6rem;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .cardsGrid {
+    grid-gap: 20px;
+    margin: 1rem 10rem;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .cardsGrid {
+    grid-gap: 15px;
+    margin: 1rem 3rem;
+  }
+}
+@media only screen and (min-width: 2300px) {
+  .cardsGrid {
+    grid-gap: 15px;
+    margin: 1rem 1.5rem;
+  }
+}
