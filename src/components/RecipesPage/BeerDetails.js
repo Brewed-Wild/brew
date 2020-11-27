@@ -1,11 +1,12 @@
+/* eslint-disable prefer-destructuring */
 /* eslint-disable operator-linebreak */
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./beerdetails.css";
 
-const BeerDetails = () => {
-  const { params } = "props.match.params";
+const BeerDetails = (props) => {
+  const params = props.match.params;
   const [currentBeer, setCurrentBeer] = React.useState({});
 
   const getBeer = () => {
@@ -16,7 +17,6 @@ const BeerDetails = () => {
 
   React.useEffect(() => {
     getBeer();
-    // console.log(currentBeer);
   }, [params.id]);
 
   return (
@@ -28,7 +28,7 @@ const BeerDetails = () => {
         <h1>{currentBeer.name}</h1>
         <h4 className="text-wrap">{currentBeer.tagline}</h4>
       </div>
-      <div className="beer-values flex-column flex-xl-row mt-5">
+      <div className="beer-values flex-column flex-md-row mt-5">
         <span>abv:{currentBeer.abv}</span>
         <span>ibu:{currentBeer.ibu}</span>
         <span>ebc:{currentBeer.ebc}</span>
@@ -38,18 +38,18 @@ const BeerDetails = () => {
         src={currentBeer.image_url}
         alt={currentBeer.name}
       />
-      <p className="details-text">
+      <span className="details-text">
         <p>{currentBeer.description}</p>
         <br />
         <em>
           Goes well with
           {currentBeer.food_pairing &&
             currentBeer.food_pairing.map((food) => (
-              <span> {food.toLowerCase()}, </span>
+              <span key={food}> {food.toLowerCase()}, </span>
             ))}
           and similar foods.
         </em>
-      </p>
+      </span>
     </div>
   );
 };

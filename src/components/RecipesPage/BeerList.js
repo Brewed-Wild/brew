@@ -148,7 +148,7 @@ export default class BeerFilters extends React.Component {
         </h1>
         <div className="cardsGrid">
           {this.state.beers.map((beer) => (
-            <div className="Card">
+            <div key={beer.id} className="Card">
               <Link to={`./beers/${beer.id}`}>
                 <BeerCard {...beer} key={beer.id} />
               </Link>
