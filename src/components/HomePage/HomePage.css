@@ -8,6 +8,16 @@ button {
   border: none;
 }
 
+a{
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #000;
+  text-decoration: none;
+}
+
 button:hover {
   color: black;
   background: #ffffff4d;
