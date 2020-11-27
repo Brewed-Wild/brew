@@ -1,4 +1,6 @@
-/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-use-before-define */
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -9,23 +11,22 @@ import "./HomePage.css";
 
 const HomePage = () => {
   const [beerOfTheWeek, setBeerOfTheWeek] = React.useState({});
-
   // Returns the ISO week of the date.
-  Date.prototype.getWeek = function () {
-    let date = new Date();
+  Date.prototype.getWeek = function time() {
+    const date = new Date();
+    const week1 = new Date(date.getFullYear(), 0, 4);
+    // Adjust to Thursday in week 1 and count number of weeks from date to week1.
     date.setHours(0, 0, 0, 0);
     // Thursday in current week decides the year.
     date.setDate(date.getDate() + 3 - ((date.getDay() + 6) % 7));
     // January 4 is always in week 1.
-    var week1 = new Date(date.getFullYear(), 0, 4);
-    // Adjust to Thursday in week 1 and count number of weeks from date to week1.
     return (
-      1 +
-      Math.round(
-        ((date.getTime() - week1.getTime()) / 86400000 -
-          3 +
-          ((week1.getDay() + 6) % 7)) /
-          7
+      1
+      + Math.round(
+        ((date.getTime() - week1.getTime()) / 86400000
+          - 3
+          + ((week1.getDay() + 6) % 7))
+          / 7,
       )
     );
   };
@@ -47,7 +48,6 @@ const HomePage = () => {
         className="carousel slide carousel-fade"
         data-ride="carousel"
         data-interval="5000"
-        // id="carousel"
       >
         <ol className="carousel-indicators">
           <li
@@ -110,14 +110,14 @@ const HomePage = () => {
               className="img2 ml-auto mr-auto"
               src={beerOfTheWeek.image_url}
               alt=""
-            />{" "}
-            <br />
+            />
+            <b />
             <em className="cardText">
               <br />
-              This week's top beer -<b>{beerOfTheWeek.name}</b> - goes well with
-              {beerOfTheWeek.food_pairing &&
-                beerOfTheWeek.food_pairing.map((food) => (
-                  <span> {food.toLowerCase()}, </span>
+              This week's top beer -<b>{beerOfTheWeek.name}</b>- goes well with
+              {beerOfTheWeek.food_pairing
+                && beerOfTheWeek.food_pairing.map((food, index) => (
+                  <span key={index}>{food.toLowerCase()},</span>
                 ))}
               and similar foods.
             </em>

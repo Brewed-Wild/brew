@@ -17,7 +17,7 @@ class BeerSearchProvider extends Component {
     return (
       <BeerSearch.Provider
         value={{
-          searchField: this.state.searchField,
+          searchField: this.state.searcField,
           searchFieldHandler: this.searchFieldHandler,
         }}
       >

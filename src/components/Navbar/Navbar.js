@@ -1,14 +1,12 @@
-/* eslint-disable quotes */
-/* eslint-disable react/prefer-stateless-function */
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BeerSearch } from "../../contexts/BeerSearch";
 import Logo from "../../Assets/LOGO/Brewers_Heaven_side_text.svg";
 import "./Navbar.css";
 
-function Navbar(props) {
+function Navbar() {
   const { searchFieldHandler } = React.useContext(BeerSearch);
-  const { searchFieldGo } = React.useContext(BeerSearch);
+  // const { searchFieldGo } = React.useContext(BeerSearch);
 
   return (
     <div className="pos-f-t">
@@ -22,7 +20,6 @@ function Navbar(props) {
               aria-controls="navbarToggleExternalContent"
               aria-expanded="false"
               aria-label="Toggle navigation"
-              exact
               to="/"
             >
               Home
@@ -72,7 +69,6 @@ function Navbar(props) {
           <Link
             className="navlink dropdown-item mt-50 text-light h-100 pt-30 pb-0 align-self-center"
             aria-pressed="true"
-            exact
             to="/"
           >
             <span>Home</span>
@@ -92,19 +88,18 @@ function Navbar(props) {
           </Link>
           <form className="form-inline pl-30" id="searchFieldContainer">
             <input
-              id="searchField"
-              onChange={searchFieldHandler}
-              type="text"
               className="form-control mr-sm-2 "
-              id="searchfield"
+              id="searchField"
               type="search"
-              placeholder="&#x1F50D; Search beer by name..."
               aria-label="Search"
+              placeholder="&#x1F50D; Search beer by name..."
+              onChange={searchFieldHandler}
             />
             <Link to="/beerlist">
               <button
                 id="buttonGo"
                 className="mt-50 h-100 text-light align-self-center d-flex"
+                type="submit"
               >
                 go
               </button>

@@ -1,10 +1,11 @@
+/* eslint-disable operator-linebreak */
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./beerdetails.css";
 
-const BeerDetails = (props) => {
-  const params = props.match.params;
+const BeerDetails = () => {
+  const { params } = "props.match.params";
   const [currentBeer, setCurrentBeer] = React.useState({});
 
   const getBeer = () => {
@@ -15,7 +16,7 @@ const BeerDetails = (props) => {
 
   React.useEffect(() => {
     getBeer();
-    console.log(currentBeer);
+    // console.log(currentBeer);
   }, [params.id]);
 
   return (
@@ -23,7 +24,7 @@ const BeerDetails = (props) => {
       <Link to="../beerlist">
         <p className="ml-4 h1"> &#x261C;</p>
       </Link>
-      <div className="beer-titles ">
+      <div className="beer-titles">
         <h1>{currentBeer.name}</h1>
         <h4 className="text-wrap">{currentBeer.tagline}</h4>
       </div>
@@ -39,10 +40,8 @@ const BeerDetails = (props) => {
       />
       <p className="details-text">
         <p>{currentBeer.description}</p>
-        {/* <span>{currentBeer.ingredients.hops&& currentBeer.ingredients.hops.map((hop) => (<span>{hop.name}</span>))}</span> */}
         <br />
         <em>
-          {" "}
           Goes well with
           {currentBeer.food_pairing &&
             currentBeer.food_pairing.map((food) => (
