@@ -1,11 +1,11 @@
 /* eslint-disable camelcase */
-/* eslint-disable react/prop-types */
 import React from "react";
 import "./beerCard.css";
 
 function BeerCard(props) {
-  // eslint-disable-next-line camelcase
-  const { name, image_url, tagline, description, abv, ibu, ebc } = props;
+  const {
+    name, image_url, tagline, description, abv, ibu, ebc,
+  } = props;
 
   return (
     <div className="cardContainer">

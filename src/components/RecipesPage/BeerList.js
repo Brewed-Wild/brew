@@ -1,11 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/state-in-constructor */
+/* eslint-disable react/static-property-placement */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/sort-comp */
 import React from "react";
-import axios from "axios";
-import BeerCard from "./BeerCard";
-import { BeerSearch } from "../../contexts/BeerSearch";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { BeerSearch } from "../../contexts/BeerSearch";
+import BeerCard from "./BeerCard";
 import "./beerList.css";
 
 export default class BeerFilters extends React.Component {
@@ -26,18 +27,23 @@ export default class BeerFilters extends React.Component {
     this.getBeers();
   }
 
-  getBeers = () => {
+  componentDidUpdate(prevContext) {
+    if (prevContext.searchField !== this.context.searchField) {
+      this.context.searchField === "" ? this.getBeers() : this.getBeersByName();
+    }
+  }
+
+  getBeersByName = () => {
+    const { searchField } = this.context;
     axios
-      .get(
-        `https://api.punkapi.com/v2/beers?abv_gt=${this.state.abvMin}&abv_lt${this.state.abvMax}`
-      )
-      .then((response) => {
-        this.setState({ beers: response.data, count: response.data.length });
-      });
+      .get(`https://api.punkapi.com/v2/beers?beer_name=${searchField}`)
+      .then((response) => this.setState({ beers: response.data }));
   };
 
   handleChange = (event) => {
-    const { abvMin, abvMax, ibuMin, ibuMax, ebcMin, ebcMax } = this.state;
+    const {
+      abvMin, abvMax, ibuMin, ibuMax, ebcMin, ebcMax,
+    } = this.state;
     this.setState(
       {
         [event.target.name]: event.target.value,
@@ -51,33 +57,31 @@ export default class BeerFilters extends React.Component {
       () => {
         axios
           .get(
-            `https://api.punkapi.com/v2/beers?abv_lt=${abvMax}&abv_gt=${abvMin}&ibu_lt=${ibuMax}&ibu_gt${ibuMin}&ebc_lt=${ebcMax}&ebc_gt${ebcMin}`
+            `https://api.punkapi.com/v2/beers?abv_lt=${abvMax}&abv_gt=${abvMin}&ibu_lt=${ibuMax}&ibu_gt${ibuMin}&ebc_lt=${ebcMax}&ebc_gt${ebcMin}`,
           )
           .then((response) => this.setState({ beers: response.data }));
-      }
+      },
     );
   };
 
-  getBeersByName = () => {
-    const { searchField } = this.context;
+  getBeers = () => {
     axios
-      .get(`https://api.punkapi.com/v2/beers?beer_name=${searchField}`)
-      .then((response) => this.setState({ beers: response.data }));
+      .get(
+        `https://api.punkapi.com/v2/beers?abv_gt=${this.state.abvMin}&abv_lt${this.state.abvMax}`,
+      )
+      .then((response) => {
+        this.setState({ beers: response.data, count: response.data.length });
+      });
   };
 
-  componentDidUpdate(prevContext) {
-    if (prevContext.searchField !== this.context.searchField) {
-      this.context.searchField === "" ? this.getBeers() : this.getBeersByName();
-    }
-  }
-
   static contextType = BeerSearch;
+
   render() {
     return (
       <div>
-        <div class="slidecontainer">
+        <div className="slidecontainer">
           <div className="abvContainer">
-            <label className="abvTitle" for="myRange">
+            <label className="abvTitle" htmlFor="myRange">
               ABV - Alcohol by Volume
             </label>
             <span className="abvSpan">
@@ -89,7 +93,7 @@ export default class BeerFilters extends React.Component {
                 max="20"
                 value={this.state.abv}
                 onChange={this.handleChange}
-                class="slider"
+                className="slider"
                 id="myRange1"
               />
               20%
@@ -97,7 +101,7 @@ export default class BeerFilters extends React.Component {
             <p className="abvNumber">{this.state.abv}</p>
           </div>
           <div className="ibuContainer">
-            <label className="ibuTitle" for="myRange">
+            <label className="ibuTitle" htmlFor="myRange">
               IBU - Bitterness
             </label>
             <span className="ibuSpan">
@@ -109,7 +113,7 @@ export default class BeerFilters extends React.Component {
                 max="100"
                 value={this.state.ibu}
                 onChange={this.handleChange}
-                class="slider"
+                className="slider"
                 id="myRange2"
               />
               High
@@ -117,7 +121,7 @@ export default class BeerFilters extends React.Component {
             <p className="ibuNumber">{this.state.ibu}</p>
           </div>
           <div className="ebcContainer">
-            <label className="ebcTitle" for="myRange">
+            <label className="ebcTitle" htmlFor="myRange">
               EBC - Color
             </label>
             <span className="ebcSpan">
@@ -129,7 +133,7 @@ export default class BeerFilters extends React.Component {
                 max="200"
                 value={this.state.ebc}
                 onChange={this.handleChange}
-                class="slider"
+                className="slider"
                 id="myRange3"
               />
               Dark

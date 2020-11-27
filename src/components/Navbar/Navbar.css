@@ -18,10 +18,12 @@
 }
 
 #buttonGo {
-  background-color: #444;
-  padding: 3px 0 0 9px;
   width: 40px;
+  height: 36px;
   margin: 0px;
+  padding: 3px 0 0 9px;
+  border-radius: 0.5rem;
+  background-color: #444;
   position: absolute;
   top: 0;
   right: 0;
@@ -30,9 +32,10 @@
 #searchFieldContainer {
   margin: 0;
   position: relative;
+  border-radius: 1rem;
 }
 
-#searchfield {
+#searchField {
   width: 270px;
 }
 

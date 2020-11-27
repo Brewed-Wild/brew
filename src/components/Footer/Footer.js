@@ -1,5 +1,3 @@
-/* eslint-disable react/state-in-constructor */
-/* eslint-disable react/prefer-stateless-function */
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../Assets/LOGO/Brewer_s Heaven icon.svg";
@@ -12,13 +10,13 @@ import Fixee from "../../Assets/Fixee.svg";
 import "./Footer.css";
 
 class Footer extends React.Component {
-  state = {
-    userEmail: "",
-    userMessage: "",
-  };
+  // state = {
+  //   userEmail: "",
+  //   userMessage: "",
+  // };
 
   handleChange = (event) => {
-    const name = event.target.name;
+    const { name } = event.target.name;
     this.setState({ [name]: event.target.value });
   };
 
@@ -32,7 +30,7 @@ class Footer extends React.Component {
             className="col-2.5  d-none d-md-flex align-items-center ml-5"
             id="logo-container"
           >
-            <Link exact to="/" className="ml-0">
+            <Link to="/" className="ml-0">
               <img src={Logo} alt="Brewer's Heaven" className="logo-footer" />
             </Link>
           </div>
@@ -54,7 +52,7 @@ class Footer extends React.Component {
             className="col d-flex align-self-start justify-content-start"
             id="our-partners"
           >
-            <p>
+            <span>
               <h6 className="pt-3">Our Partners</h6>
               <div className="partner-logo-container d-inline-grid justify-self-center">
                 <a href="https://www.raspberrypi.org/">
@@ -68,13 +66,13 @@ class Footer extends React.Component {
                   <img className="sali-logo" src={SaliSali} alt="" />
                 </a>
               </div>
-            </p>
+            </span>
           </div>
           <div
             className="col-3.5 d-md-flex flex-column mr-2 pt-3"
             id="contact-us"
           >
-            <p className="text-right mr-4">
+            <span className="text-right mr-4">
               <h6>Start a conversation</h6>
               <p>
                 <a
@@ -84,7 +82,7 @@ class Footer extends React.Component {
                   className="text-dark"
                 >
                   hi@brewersheaven.com
-                </a>{" "}
+                </a>
                 <br />
                 <a href="tel:+351 910 600 569" className="text-dark">
                   +351 910 600 569
@@ -97,7 +95,7 @@ class Footer extends React.Component {
                   Rua do Conde de Redondo 145-2 Lisbon
                 </a>
               </p>
-            </p>
+            </span>
           </div>
         </div>
         <div className="footerSignature">

@@ -79,6 +79,7 @@ function About() {
             id="buttonExploreOurBeers"
             className="btn-lg btn-info mx-auto"
             onClick={redirect}
+            type="submit"
           >
             EXPLORE OUR BEERS
           </button>

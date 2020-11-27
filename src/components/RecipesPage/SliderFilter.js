@@ -8,9 +8,9 @@ class SliderFilter extends React.Component {
 
   handleSlideChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
-    console.log(event.target);
-    console.log(event.target.name);
-    console.log(event.target.value);
+    // con  sole.log(event.target);
+    // console.log(event.target.name);
+    // console.log(event.target.value);
   };
 
   render() {
