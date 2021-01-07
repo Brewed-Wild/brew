@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BeerSearch } from "../../contexts/BeerSearch";
+import { BeerSearch } from "../../../contexts/BeerSearch";
 import Logo from "../../Assets/LOGO/Brewers_Heaven_side_text.svg";
 import "./Navbar.css";
 
