@@ -1,17 +1,17 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import BeerSearchProvider from "./contexts/BeerSearch";
+import BeerContextProvider from "./contexts/BeerContext";
+import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
+import About from "./components/AboutPage/AboutPage";
 import HomePage from "./components/HomePage/HomePage";
 import BeerList from "./components/RecipesPage/BeerList";
-import About from "./components/AboutPage/AboutPage";
-import Footer from "./components/Footer/Footer";
 import BeerDetails from "./components/RecipesPage/BeerDetails";
 import "./App.css";
 
 function App() {
   return (
-    <BeerSearchProvider>
+    <BeerContextProvider>
       <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage} />
@@ -20,7 +20,7 @@ function App() {
         <Route path="/beers/:id" component={BeerDetails} />
       </Switch>
       <Footer />
-    </BeerSearchProvider>
+    </BeerContextProvider>
   );
 }
 export default App;

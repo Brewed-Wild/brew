@@ -5,7 +5,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { BeerSearch } from "../../contexts/BeerSearch";
+import { BeerContext } from "../../contexts/BeerContext";
 import BeerCard from "./BeerCard";
 import "./beerList.css";
 
@@ -74,7 +74,7 @@ export default class BeerFilters extends React.Component {
       });
   };
 
-  static contextType = BeerSearch;
+  static contextType = BeerContext;
 
   render() {
     return (

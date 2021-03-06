@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BeerSearch } from "../../../contexts/BeerSearch";
+import { BeerContext } from "../../contexts/BeerContext";
 import Logo from "../../Assets/LOGO/Brewers_Heaven_side_text.svg";
 import "./Navbar.css";
 
 function Navbar() {
-  const { searchFieldHandler } = React.useContext(BeerSearch);
-  // const { searchFieldGo } = React.useContext(BeerSearch);
+  const { searchFieldHandler } = React.useContext(BeerContext);
 
   return (
     <div className="pos-f-t">
@@ -79,7 +78,6 @@ function Navbar() {
           >
             <span>Beer</span>
           </Link>
-          {/* <div className="dropdown-divider bg-secondary" /> */}
           <Link
             className="navlink dropdown-item mt-50 text-light h-100 pb-0 align-self-center"
             to="/about"
