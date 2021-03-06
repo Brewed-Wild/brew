@@ -1,8 +1,8 @@
 import React, { createContext, Component } from "react";
 
-export const BeerSearch = createContext();
+export const BeerContext = createContext();
 
-class BeerSearchProvider extends Component {
+class BeerContextProvider extends Component {
   state = {
     searchField: "",
   };
@@ -15,16 +15,16 @@ class BeerSearchProvider extends Component {
 
   render() {
     return (
-      <BeerSearch.Provider
+      <BeerContext.Provider
         value={{
-          searchField: this.state.searcField,
+          searchField: this.state.searchField,
           searchFieldHandler: this.searchFieldHandler,
         }}
       >
         {this.props.children}
-      </BeerSearch.Provider>
+      </BeerContext.Provider>
     );
   }
 }
 
-export default BeerSearchProvider;
+export default BeerContextProvider;
