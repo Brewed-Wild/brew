@@ -91,6 +91,7 @@ export default class BeerFilters extends React.Component {
                 type="range"
                 min="1"
                 max="20"
+                step="0.1"
                 value={this.state.abv}
                 onChange={this.handleChange}
                 className="slider"
@@ -111,6 +112,7 @@ export default class BeerFilters extends React.Component {
                 type="range"
                 min="1"
                 max="100"
+                step="0.1"
                 value={this.state.ibu}
                 onChange={this.handleChange}
                 className="slider"
@@ -131,6 +133,7 @@ export default class BeerFilters extends React.Component {
                 type="range"
                 min="1"
                 max="200"
+                step="0.1"
                 value={this.state.ebc}
                 onChange={this.handleChange}
                 className="slider"
